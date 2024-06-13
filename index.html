@@ -23,14 +23,14 @@
             <h2 class="welcome-message">欢迎来到Lan的秘密基地！</h2>  
             <p class="profile-summary">数字媒体技术本科生、业余键盘手、学生作家、（天文）摄影爱好者、兼职Unity2D程序、音乐、特效制作 .etc</p> 
             <p class="profile-summary2">期待与你相逢的每一天，祝好！<br/>你可以通过这些网站找到我：</p>  
-            <li><a href="https://space.bilibili.com/209197077">我的Bilibili主页</a></li>
-            <li><a href="https://www.cnblogs.com/K-aedE">我的博客园主页</a></li>
+            <li><a href="https://space.bilibili.com/209197077" style="text-decoration:none;color:lightblue;">我的Bilibili主页</a></li>
+            <li><a href="https://www.cnblogs.com/K-aedE" style="text-decoration:none;color:lightblue;">我的博客园主页</a></li>
         </div>  
   
         <div class="content">  
             <button class="tab-button" onclick="showContent('content1')">诗歌</button>  
-            <button class="tab-button" onclick="showContent('content2')">内容2</button>  
-            <button class="tab-button" onclick="showContent('content3')">内容3</button>  
+            <button class="tab-button" onclick="showContent('content2')">算法</button>  
+            <button class="tab-button" onclick="showContent('content3')">暂无</button>  
   
             <div id="content1" class="tab-content">  
                 <h3>这里存着我的小诗</h3>  
@@ -192,8 +192,88 @@
             </div>  
   
             <div id="content2" class="tab-content">  
-                <h3>内容2标题</h3>  
-                <p>这里是内容2的详细描述...</p>  
+                <h3>这里存着一些算法与数据结构的笔记</h3>  
+                <h4>通过二维动态规划解决0-1背包问题</h4>
+                <pre>
+                    package lanlanHelper;
+public class Main {
+	
+	// 创建物品类，你也可以不创，反正这样更省事
+	private static class Item{
+		public int value;
+		public int weight;
+		public Item(int value, int weight) {
+			this.value = value;
+			this.weight = weight;
+		}
+	}
+    
+	public static void main(String[] args) {
+		Item[] item;
+		
+		// 这里的物品数据可以自行添加，本质上只有四个物品，第0个是便于计算建立的
+		int itemNum = 5;
+		item = new Item[itemNum];
+		item[0] = new Item(0,0);
+		item[1] = new Item(3,2);
+		item[2] = new Item(4,3);
+		item[3] = new Item(5,4);
+		item[4] = new Item(8,5);
+		
+		// 背包大小
+		int bagSize = 8;
+		
+		// 构建DP表
+		int[][] dp = new int[itemNum][bagSize+1];
+		
+		// 如果你不想要输出dp表，可以把这行注释掉
+		printDP_Hong(dp);
+		
+		// i从1开始遍历到itemNum-1，j从1开始遍历到bagSize.
+		// 表述为选取1/2/3/.../i个物品，使其总重量不超过j的，最大总价值
+		for(int i=1; i<itemNum; i++) {
+			for(int j=1; j<bagSize+1; j++) {
+				// 假设在可以选取i个物品的情况不选当前的物品，那么这格的价值和它上面一格（只选取i-1个物品）的相同
+				dp[i][j] = dp[i-1][j];
+				
+				// 如果当前最大容量j可以存储新物体item[i]
+				if(j-item[i].weight>=0) {
+					
+					// 比较不选这个物品和选择这个物品，哪个更有价值。（具体解释参见笔记）
+					dp[i][j] = Math.max(dp[i][j], dp[i-1][j-item[i].weight]+item[i].value);
+				} else {
+					// 如果已经存不下了，比较“只选取i-1个物品的最大价值”和“只装比最大容量小一点的最大价值”，哪个情况更好
+					dp[i][j] = Math.max(dp[i][j], dp[i][j-1]);
+				}
+			}
+			
+			// 如果你不想要输出dp表，可以把这行注释掉
+			printDP_Hong(dp);
+		}
+		
+		// 输出结果
+		System.out.println(dp[itemNum-1][bagSize]);
+	}
+	
+	public static void printDP_Hong(int[][] dp) {
+		System.out.print("********\nDP Table:\nMaximum Volume ");
+		for(int k=0; k<dp[0].length; k++) {
+			System.out.print(k+" ");
+		}
+		System.out.println("\n               _________________");
+		for(int i=0; i<dp.length; i++) {
+			System.out.println();
+			for(int j=0; j<dp[0].length; j++) {
+				if(j == 0)	System.out.print("Item Number "+i+"| ");
+				System.out.print(dp[i][j]+" ");
+			}
+			System.out.println();
+		}
+		System.out.println("*******");
+	}
+}
+
+                </pre>
             </div>  
   
             <div id="content3" class="tab-content">  
