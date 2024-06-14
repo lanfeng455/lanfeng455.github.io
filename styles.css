@@ -58,6 +58,10 @@ nav ul li a {
     border: none;  
     cursor: pointer;  
 }  
+
+.tab-button:hover {
+    background-color: #d95763;
+}
   
 .tab-content {  
     display: none;  
