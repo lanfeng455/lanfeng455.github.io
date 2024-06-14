@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            a:link{
+                text-decoration: none;
+                color:#ff5522;
+            }
+
+            a:hover{
+                color:brown;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center">Lanlan BFS</h1>
+        <h2 style="text-align:center">如果需要具体解释，请联系<a href="https://space.bilibili.com/209197077">Lan</a>获取笔记或私人讲解</h2>
+        <div style="text-align:center">
+            <a href="https://www.bilibili.com/video/BV1du411B7nX">
+                <img src="kasumi_smile.jpg" style="width: 232px;height: 135px;">
+            </a>
+        </div>
+        
+        <pre style="font-family:'Times New Roman', Times, serif; background-color:#c6c4d2">
+import java.util.Queue;
+import java.util.LinkedList;
+
+public class BFS {
+
+	private static class G{
+		public Vertex[] V;
+		
+		public G(Vertex[] V) {
+			this.V = V;
+		}
+	}
+	
+	private static class Vertex{
+		public String color = "WHITE";
+		public int d = 114514;
+		public Vertex pi = null;
+		public LinkedList<Vertex> li = new LinkedList<Vertex>();
+		
+		public char value;
+		
+		public Vertex(char value) {
+			this.value = value;
+		}
+	}
+	
+	public static void main(String[] args) {
+		// 预设一组顶点
+		Vertex[] V = new Vertex[8];
+		int i = 0;
+		for(char z='a'; z<'i'; z++) {
+			V[i] = new Vertex(z);
+			i++;
+		}
+		
+		// 给顶点添加邻接链表
+		V[0].li.add(V[1]);
+		V[1].li.add(V[2]);
+		V[1].li.add(V[7]);
+		V[2].li.add(V[3]);
+		V[2].li.add(V[4]);
+		V[3].li.add(V[2]);
+		V[4].li.add(V[2]);
+		V[4].li.add(V[5]);
+		V[4].li.add(V[6]);
+		V[5].li.add(V[4]);
+		V[6].li.add(V[4]);
+		V[7].li.add(V[1]);
+		
+		// 基于这组顶点制作图
+		G g = new G(V);
+		
+		// 选中源顶点 s = V[0]
+		g = BFS_Hong(g, g.V[0]);
+		
+		for(Vertex v: g.V) {
+			String pi = "null";
+			if(v.pi != null)	pi = v.pi.value+"";
+			System.out.printf("%s node has\n d:%s\n pi:%s\n", v.value, v.d, pi);
+		}
+	}
+
+	public static G BFS_Hong(G g, Vertex s) {
+		// 因为在创建静态类Vertex的时候已经写过了，所以不需要初始化
+		// 初始化源顶点
+		s.color = "GRAY";
+		s.d = 0;
+		s.pi = null;
+		
+		// 队列启动！
+		Queue<Vertex> Q = new LinkedList<Vertex>();
+		Q.add(s);
+		
+		// 跑
+		while(!Q.isEmpty()) {
+			// 出列！
+			Vertex u = Q.poll();
+			for(Vertex v: u.li) {
+				if(v.color.compareTo("WHITE") == 0) {
+					v.color = "GRAY";
+					v.d = u.d + 1;
+					v.pi = u;
+					
+					// 入列！
+					Q.add(v);
+				}
+			}
+			
+			// 它已经结束了它的使命
+			u.color = "BLACK";
+		}
+		return g;
+	}
+}
+
+        </pre>
+    </body>
+</html>
