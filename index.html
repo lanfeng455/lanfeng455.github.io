@@ -6,6 +6,16 @@
     <title>LAN的秘密网站</title>  
     <link rel="stylesheet" href="styles.css">  
     <link href="styles/background-color.css" rel="stylesheet" type="text/css">
+	<style>
+		.hi a:link{
+			text-decoration:none;
+			color:navy;
+		}
+
+		.hi a:hover{
+			color:#FF5522;
+		}
+	</style>
 </head>  
 <body>  
     <header>  
@@ -23,9 +33,9 @@
             <h2 class="welcome-message">欢迎来到Lan的秘密基地！</h2>  
             <p class="profile-summary">数字媒体技术本科生、业余键盘手、学生作家、（天文）摄影爱好者、兼职Unity2D程序、音乐、特效制作 .etc</p> 
             <p class="profile-summary2">感谢与你相逢的每一天，祝好！<br/>你可以通过这些网站找到我：</p>  
-            <li style="list-style-type: '\1F44D';"><a href="https://space.bilibili.com/209197077" style="text-decoration:none;color:navy;">我的Bilibili主页</a></li>
-            <li style="list-style-type: '\1F44D';"><a href="https://www.cnblogs.com/K-aedE" style="text-decoration:none;color:navy;">我的博客园主页</a></li>
-	    <li style="list-style-type: '\1F44D';"><a href="https://music.163.com/#/user/home?id=5162280394" style="text-decoration:none;color:navy;">我的网易云主页（小号）</a></li>
+            <li style="list-style-type: '\1F44D';"><a href="https://space.bilibili.com/209197077" class = "hi">我的Bilibili主页</a></li>
+            <li style="list-style-type: '\1F44D';"><a href="https://www.cnblogs.com/K-aedE" class="hi">我的博客园主页</a></li>
+	    <li style="list-style-type: '\1F44D';"><a href="https://music.163.com/#/user/home?id=5162280394" class="hi">我的网易云主页（小号）</a></li>
         </div>  
   
         <div class="content">  
@@ -194,6 +204,10 @@
   
             <div id="content2" class="tab-content">  
                 <h3>这里存着一些算法与数据结构的笔记</h3>  
+		<a href="BFS_Lan.html" target="_blank" class="hi">
+		2024.6.14更新：广度优先搜索 Java实现（附注释）
+		</a>
+		    
                 <h4>通过二维动态规划解决0-1背包问题</h4>
                 <pre>
 public class Main {
@@ -256,9 +270,7 @@ public class Main {
 	}
 	</pre>
 
-	<a href="BFS_Lan.html" target="_blank" style="text-decoration:none;">
-		2024.6.14更新：广度优先搜索 Java实现（附注释）
-	</a>
+	
 <!-- 	<H4>
 		下面是打印这个DP表的方法。（可能显示不全，我也不知道代码块在抽什么风）
 	</H4>
