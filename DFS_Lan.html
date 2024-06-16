@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            a:link{
+                text-decoration: none;
+                color:#ff5522;
+            }
+
+            a:hover{
+                color:brown;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center">Lanlan 深度优先搜索</h1>
+        <h2 style="text-align:center">如果需要具体解释，请联系<a href="https://space.bilibili.com/209197077">Lan</a>获取笔记或私人讲解</h2>
+        <div style="text-align:center">
+            <a href="https://www.bilibili.com/video/BV1du411B7nX">
+                <img src="kasumi_smile.jpg" style="width: 232px;height: 135px;">
+            </a>
+        </div>
+        
+        <pre style="font-family:'Times New Roman', Times, serif; background-color:#c6c4d2">
+			import java.util.LinkedList;
+
+			public class DFS {
+				
+				// 时间是一个全局的静态变量
+				private static int time = 0;
+				
+				//这里沿用了BFS的图G和顶点V的静态类
+				private static class G{
+					public Vertex[] V;
+					
+					public G(Vertex[] V) {
+						this.V = V;
+					}
+				}
+				
+				private static class Vertex{
+					private Vertex pi = null;
+					public String color = "WHITE";
+					public int d = 0;
+					public int f = 0;
+					public LinkedList<Vertex> li = new LinkedList<Vertex>();
+					
+					public char value;
+					
+					public Vertex(char value) {
+						this.value = value;
+					}
+					
+					public void setPi(Vertex pi) {
+						this.pi = pi;
+					}
+					
+					public String getPi() {
+						if(pi == null)	return "null";
+						else			return pi.value+"";
+					}
+				}
+				
+				// DFS的控制台
+				private static G DFS_Hong(G g) {
+					// 顶点初始化在构造时就已经进行，所以这里省略
+					
+					// 重置时间
+					time = 0;
+					
+					// 开始扫
+					for(Vertex v: g.V) {
+						if(v.color.compareTo("WHITE") == 0) {
+							DFS_VISIT_Hong(g,v);
+						}
+					}
+					
+					return g;
+				}
+				
+				// DFS的本体
+				private static void DFS_VISIT_Hong(G g, Vertex u) {
+					time = time + 1;
+					u.d = time;
+					u.color = "GRAY";
+					
+					System.out.println("*****Now we are visiting: "+u.value+" *****");
+					
+					for(Vertex v: u.li) {
+						if(v.color.compareTo("WHITE") == 0) {
+							v.setPi(u);
+							DFS_VISIT_Hong(g, v);
+						}
+					}
+					
+					time = time + 1;
+					u.f = time;
+					u.color = "BLACK";
+				}
+
+				public static void main(String[] args) {
+					// 预设一组顶点
+					Vertex[] V = new Vertex[6];
+					int i = 0;
+					for(char z='u'; z<='z'; z++) {
+						V[i] = new Vertex(z);
+						i++;
+					}
+					
+					// 给顶点添加邻接链表
+					V[0].li.add(V[1]);
+					V[0].li.add(V[3]);
+					V[1].li.add(V[4]);
+					V[2].li.add(V[4]);
+					V[2].li.add(V[5]);
+					V[3].li.add(V[1]);
+					V[4].li.add(V[3]);
+					
+					// 基于这组顶点制作图
+					G g = new G(V);
+					
+					g = DFS_Hong(g);
+					
+					for(Vertex v: g.V) {
+						System.out.printf("%s node has\n discovery time:%s\n finishing time:%s\n", v.value, v.d, v.f);
+					}
+
+				}
+
+			}
+
+	
+		</pre>
+    </body>
+</html>
