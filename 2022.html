@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 style="background-color:navy;color:aliceblue">Question 1</h1>
+        <h1>Look! Styles and <span style="font-size: 25px;">colors</span></h1>
+        <p style="font-family:'Verdana';color:red">
+            This text is in Verdana and red
+        </p>
+        <p style="font-size:30px;">This text is <strong>30</strong> pixels high</p>
+    
+        <br>
+
+        <form>
+            name:<br>
+            <input type="text" name="name" value="FZU">
+            <br>
+           gender:
+            <input type="radio" name="gender" value="male" checked> 
+           Male
+            <input type="radio" name="gender" value="female"> Female
+            <br>
+           hobbies：
+            <input type="checkbox" checked>running
+            <input type="checkbox" checked>swimming
+            <br>
+           Self-evaluation:（1 to 5）：
+            <input type="number" name="quantity" min ="1" max="5">
+            <br>
+            <input type="submit" value="Submit">
+           </form> 
+
+           <br>
+
+           <h2>Lionel Messi</h2>
+            Lionel Andrés Messi,also known as Leo Messi,is an Argentine professional 
+            footballer who plays as a forward for Ligue 1 club Paris Saint-Germain and 
+            captains the Argentina national team.
+            <br/>
+            <img src="kasumi2.jpg">
+            <br/>
+            He won the 2021 Copa América,while winning the Golden Ball and Golden 
+            Boot award for the latter.This achievement would see him receive a record 
+            seventh Ballon d'Or in 2021.
+            <br/>
+            <a href="https://en.wikipedia.org/wiki/Lionel_Messi">
+            Go to Wikipedia to learn more </a>
+
+            <h1 style="background-color:navy;color:aliceblue">Question 2</h1>
+            <h1>title 1</h1>
+            <h2>title 2</h2>
+            <em>Paragraph: FZU</em>
+
+            <hr>
+            <ul style="list-style-type:none">
+                <li>Coffee
+                    <ul>
+                        <li style="list-style-type:'- '">
+                            black hot drink
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>Milk
+                    <ul>
+                        <li style="list-style-type:'- '">
+                            white cold drink
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+                
+            <hr>
+
+            <style>
+                td{
+                    text-align: center;
+                    border: 1px solid black;
+                }
+            </style>
+
+            <table style="border: 1px solid black;border-collapse:collapse">
+                <tr>
+                    <th style="border: 1px solid black;">Row1</th>
+                    <th style="border: 1px solid black;">Row2</th>
+                    <th style="border: 1px solid black;">Row3</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <ul>
+                            <li>Coffee</li>
+                            <li>Milk</li>
+                        </ul>
+                    </td>
+                    <td>Col2row1</td>
+                    <td>Col2row3</td>
+                </tr>
+                <tr>
+                    <td>Col3row1</td>
+                    <td>Col3row3</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center;">
+                        Col4
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+
+            <h1 style="background-color:navy;color:aliceblue">Question 3</h1>
+            <style>
+                .mid{
+                    border: 1px solid red;
+                    height: 50px;
+                    width: 80px;
+                }
+            </style>
+            <div class="mid"></div>
+
+            <hr>
+            <style>
+                .circle{
+                    width: 0%;
+                    height: 0%;
+                    border: 100px solid;
+                    border-radius: 50%;
+                    border-color: blue red green purple;
+                }
+            </style>
+            <div class="circle"></div>
+            <p>本题致谢：黎睿博同学，和他大无私的开源精神</p>
+
+            <hr>
+            <!--这题的重点在于position和float的使用
+            在计算100% - 400px的时候，需要用到calc函数-->
+            <style>
+                .container{
+                    width: 100%;
+                }
+
+                .left{
+                    position: relative;
+                    float: left;
+                    width: 200px;
+                    height: 200px;
+                    background-color: green;
+                }
+
+                .main{
+                    position: relative;
+                    float: left;
+                    width: calc(100% - 400px);
+                    height: 200px;
+                    background-color: red;
+                }
+
+                .right{
+                    position: relative;
+                    float: left;
+                    width: 200px;
+                    height: 200px;
+                    background-color: pink;
+                }
+            </style>
+
+            <div class="container">
+                <div class="left">Left</div>
+                <div class="main">Mid</div>
+                <div class="right">Right</div>
+            </div>
+
+            <br>
+
+            <h1 style="background-color:navy;color:aliceblue">Question 4</h1>
+            <!--第四题 a-->
+            <h2>p 的颜色是<span style="color:#368">#368</span></h2>
+
+            
+            <hr>
+            <!-- 这里的position填relative 
+            relative在移动时不影响其他物体的位置-->
+            <!--第四题 b-->
+
+            <style>
+                .outer{
+                    width: 300px;
+                    height: 300px;
+                    background-color: #CCC;
+                }
+
+                .outer span{
+                    float: left;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            </style>
+
+            <div class="outer">
+                <span>Hello World</span>
+            </div>
+
+
+            <!--第四题 c-->
+            <style>
+                a:link,a:visited{
+                    text-decoration: none;
+                }
+
+                a:hover, a:active{
+                    text-decoration: underline;
+                }
+            </style>
+
+            <a href="">This is a link.</a>
+
+            <h1 style="background-color:navy;color:aliceblue">Question 5</h1>
+            <!--第五题 a i-->
+            <!--解决方法：var a in person，用person[a]遍历每个元素值-->
+
+            <script>
+                function myFunction(){
+                    var x;
+                    var txt="";
+                    var person = {fname:"Michael",lname:"Jackson",phoneNUmber:"111-111-111",address:"Queen54"};
+                    for(var a in person){
+                        txt = txt + person[a];
+                    }
+                    document.getElementById("demo").innerHTML = txt;
+                }
+            </script>
+
+            <div id="demo"></div>
+            <button onclick="myFunction()">点我看效果</button>
+
+            <hr>
+
+            <!--第五题 a ii-->
+            <!--解决方法：把fruits看成一个栈，用push把新元素推进来，用reverse反转，然后用pop把先前在底部、被反转上来的watermelon推出栈-->
+            <script>
+                var fruits = ["Watermelon","Apple","Strawberry","Pear"];
+                function myFunction2(){
+                    fruits.push("Orange");
+                    fruits.reverse();
+                    fruits.pop();
+
+                    var x = document.getElementById("demo2");
+                    x.innerHTML = fruits;
+                }
+            </script>
+            <div id="demo2"></div>
+            <button onclick="myFunction2()">点我看效果</button>
+
+            <hr>
+
+            <!--第五题 b-->
+            <!--这位更是重量级
+                正则的写法：/用来检查的单元用两个单斜杠围起来/
+                \d：一个数字
+                \w：只要是一个单词字符就可以（a-z,A-Z,0-9,_等）
+                \：转义符号
+                (aa|ba|ca)：匹配aa或ba或ca
+
+                检查单元.test(待测单元)：返回一个布尔值
+            -->
+            <label for="phone">Mobile phone:</label><br>
+            <input id="phone" type="text" onblur="validatemobile()">
+            <br>
+            <p id="msg"></p> <!-- Prompt text is here -->
+            </body>
+            </html>
+            <script type="text/javascript">
+                function validatemobile(){
+                    var userInput = document.getElementById("phone").value;
+                    var msg = document.getElementById("msg");
+
+                    if(userInput == ""){
+                        msg.innerHTML = "Mobile phone number cannot be empty";
+                    }else{
+                        if(/^\d{11}$/.test(userInput)){
+                            if(/^(13|15|18).*$/.test(userInput)){
+                                msg.innerHTML = "";
+                            }else{
+                                msg.innerHTML = "Please enter a valid mobile phone number";
+                            }
+                        }else{
+                            if(/^(13|15|18).*$/.test(userInput)){
+                                msg.innerHTML = "";
+                            }else{
+                                msg.innerHTML = "Please enter a valid mobile phone number";
+                            }
+                        }
+                    }
+                }
+            </script>
+    </body>
+</html>
