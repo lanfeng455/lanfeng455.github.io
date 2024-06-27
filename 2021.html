@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 style="background-color:navy;color:aliceblue">Question 1</h1>
+        <!--Q1 a-->
+        <style>
+            .q1a{
+                background-color: grey;
+            }
+
+            .q1a p{
+                color: white;
+            }
+        </style>
+
+        <div class="q1a">
+            <h1>This is a heading</h1>
+            <p>This is a paragraph.</p>
+        </div>
+        
+        <hr>
+
+        <!--Q1 b-->
+        <!--考察有序列表ol的使用，通过type=""这个关键字更改序号格式-->
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk
+                <ol type="a">
+                    <li>pure milk</li>
+                    <li>yoghurt</li>
+                    <li>sweet milk</li>
+                </ol>
+            </li>
+            <li>Juice</li>
+        </ul>
+
+        <hr>
+
+        <p>Q1 c在22年也考过，不写了</p>
+
+        <h1 style="background-color:navy;color:aliceblue">Question 2</h1>
+        <!--Q2 a-->
+        <!--（padding等）简写的顺序：左上右下-->
+        <style>
+            .center{
+                border: 3px solid gray;
+                text-align: center;
+                padding: 70px 0px 70px 0px;
+            }
+        </style>
+
+        <div class="center">
+            <p>Horizontal and vertical center alignment</p>
+        </div>
+
+        <hr>
+
+        <!--Q2 b-->
+        <!--会附图-->
+        <style>
+            .triangle{
+                width: 0%;
+                height: 0%;
+                border-top: 200px solid transparent;
+                border-right: 100px solid transparent;
+                border-bottom: 200px solid #FFC0CB;
+                border-left: 100px solid transparent;
+            }
+        </style>
+
+        <div class="triangle"></div>
+
+        <hr>
+
+        <!--Q2 c-->
+        <style>
+            .header{
+                width: 100%;
+                height: 70px;
+                background-color: #666666;
+                text-align: center;
+            }
+
+            .header h1{
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            
+            /*因为这个页面同时存多题，随便让高度为100%会让画面很震撼，这边改为100px*/
+            .sidenav{
+                float: left;
+                width: 200px;
+                height: 100px;
+                background-color: #999999;
+            }
+
+            /*因为这个页面同时存多题，随便让高度为100%会让画面很震撼，这边改为100px*/
+            .content{
+                float: left;
+                width: calc(100%-200px);
+                height: 100px;
+                background-color: #f1f1f1;
+            }
+
+            .footer{
+                float: left;
+                background-color: #333333;
+                width: 100%;
+                height: 60px;
+            }
+        </style>
+
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+        <div class=”container”>
+        <div class="sidenav"></div>
+        <div class="content"></div>
+        </div>
+        <div class="footer"></div>
+
+        <br><br><br><br><br><br><br>
+
+        <h1 style="background-color:navy;color:aliceblue">Question 3</h1>
+
+        <h2>(b)</h2>
+        <p>这byd是啥</p>
+        <script>
+            var myObject = {
+                foo: "bar",
+                func: function() { 
+                var self = this; 
+                console.log("outer func: this.foo = " + this.foo); 
+                console.log("outer func: self.foo = " + self.foo);
+                (function() { console.log("inner func: this.foo = " + this.foo);
+                console.log("inner func: self.foo = " + self.foo);}());
+                }
+                };
+                console.log(myObject);
+        </script>
+
+        <hr>
+        <h2>(c)</h2>
+        <script type="text/javascript">
+        function moveBtn(button1){
+            if(button1.id == "button1"){
+                var tempId = button1.id;
+                var tempValue = button1.value;
+                button1.id = "Toyama";
+                button1.value = "Kasumi";
+                var button2 = document.getElementById("button2");
+                var tempId2 = button2.id;
+                var tempValue2 = button2.value;
+                button2.id = tempId;
+                button2.value = tempValue;
+                button1.id = tempId2;
+                button1.value = tempValue2;
+            }
+        }
+        </script>
+            
+        <div>
+        <input type="button" id ="button1" value="1" onclick="moveBtn(this);">
+        <input type="button" id ="button2" value="2" />
+        </div>
+
+        <h1 style="background-color:navy;color:aliceblue">Question 4</h1>
+        <h2>(a)，这题有点意思的</h2>
+
+        <script>
+            var fruits =  ["Banana", "Orange", "Apple", "Mango"];
+            function myFunction(){
+                fruits.sort();
+                fruits.reverse();
+                document.getElementById("demo").innerHTML = fruits;
+            }
+
+            function myFunction2(){
+                var x = "", i;
+                for(i=1; i<7; i++){
+                    x = x + "<h" + i + ">" + "Title " + i + "</h" + i + ">";
+                }
+                document.getElementById("demo").innerHTML = x;
+            }
+        </script>
+
+        <div id="demo"></div>
+        <button onclick="myFunction()">来水果</button>
+        <button onclick="myFunction2()">来标题</button>
+
+        <hr>
+
+        <h2>(b) age懒得写了，差不多意思</h2>
+
+        <script type="text/javascript">
+            function checkpwd(){
+                var pwd = document.getElementById("pwd");
+                var pwd2 = document.getElementById("pwd2");
+                var pv = pwd.value;
+                var pv2 = pwd2.value;
+                if(!(pv == pv2)){
+                    var pwdmsg = document.getElementById("pwdmsg");
+                    pwdmsg.innerHTML = "Two passwords are inconsistent";
+                }else{
+                    var pwdmsg = document.getElementById("pwdmsg");
+                    pwdmsg.innerHTML = "";
+                }
+            }
+        </script>
+
+        <label for="pwd">Password:</label><br>
+        <input id="pwd" type="text" required>
+        <br>
+        <label for="pwd2">PasswordAgain:</label><br>
+        <input id="pwd2" type="text" onblur="checkpwd()">
+        <p id="pwdmsg"></p>
+        <label for="age">Age:</label><br>
+        <input id="age" type="text" onblur="checkage()">
+        <p id="agemsg"></p>
+
+    </body>
+</html>
