@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孤岛计划-七昼梦</title>
+    <link rel="icon" href="bohe.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: auto;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-image: url('Tree.png');
+            background-repeat: no-repeat;
+            /* Make the background at the button right of the page*/
+            background-position: right bottom;
+        }
+        .poster {
+            width: 20%;
+            height: auto;
+            animation: fadeIn 1s forwards;
+        }
+        .award{
+            width: 40%;
+            /* height: 80%; */
+            /* Decorate like a trophy*/
+            transform: rotate(15deg);
+            /* A border to decorate the award*/
+            border: 5px solid #f4f4f4;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .award-container {
+                background-color: #000000;
+                /* Paddings among the elements inside*/
+                padding: 10px;
+                /* A border to make the container much cooler*/
+                border: 5px solid #f4f4f4;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+                position: relative;
+                right: 0;
+                top: 10%;
+                /* The elements can just in one line*/
+                display: flex;
+                
+                /* transform: translateY(0%); */
+                
+                /* flex-direction: row; */
+                /* Make the elements start from the right side*/
+                
+                align-items: right;
+                
+            }
+
+        @keyframes fadeIn{
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                right: -100px;
+                opacity: 0;
+            }
+            to {
+                right: 0;
+                opacity: 1;
+            }
+        }
+
+        .ulForText{
+            list-style: none;
+            padding: 0;
+            /* With some interesting decorations or animations*/
+            background-color: #f4f4f473;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .ulForCharacter{
+            list-style: none;
+            padding: 0;
+            /* With some interesting decorations or animations*/
+            background-color: #f4f4f473;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .liForText{
+            padding: 3px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .liForCharacter{
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .title {
+            font-size: 2em;
+            margin: 20px 0;
+            /* A border to make the title much cooler*/
+            border-bottom: 2px solid #f4f4f4;
+            padding-bottom: 10px;
+
+        }
+        .description {
+            font-size: 1em;
+            margin: 20px 0;
+            /* A background to make the description united*/
+            background-color: #f4f4f473;
+            padding: 20px;
+            border-radius: 5px;
+
+        }
+        .download-link {
+            display: inline-block;
+            padding: 10px 20px;
+            position: inherit;
+            background-color: #93e6f4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-link:hover {
+            background-color: #0056b3;
+        }
+
+        .show-link {
+            display: inline-block;
+            padding: 10px 20px;
+            position: inherit;
+            background-color: #f4f4f4;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .show-link:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="display: flex; align-items: flex-start;">
+            
+
+            <div class="award-container">
+                <img src="Poster-Nana.jpg" alt="Game Poster" class="poster">
+                <img src="Poster-Nana2.jpg" alt="Game Poster" class="poster">
+                <img src="Poster-Nana3.jpg" alt="Game Poster" class="poster">
+                <img src="Poster-Nana4.jpg" alt="Game Poster" class="poster">
+                <div style="text-align: right; position: relative;animation: slideIn 2s forwards; width: 20%;">
+                    <img src="Award-Nana.png" alt="Game Award1" class="award">
+                    <img src="Award-Nana2.png" alt="Game Award2" class="award">
+                </div>
+                
+            </div>
+        </div>
+        
+        <div style="position: inherit;background-color: #2d5f6867;padding: 20px;">
+            <h1 class="title">七昼梦（Nana-Chiume）</h1>
+            <p class="description">带有早期日式解谜RPG味道、结合Meta和各种要素的剧情探索游戏，以“日有所思，夜有所梦”为核心玩法，夹杂了不同难度的小游戏。故事在欢声笑语的幕后缓缓展开——<br><b>“请别沉溺在梦中太久”</b>。</p>
+        </div>
+
+        <hr>
+
+        <div style="border: 5px solid #f4f4f4;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);padding: 20px;background-color: #2d5f6867;">
+            <h2>关于游戏</h2>
+            <ul class="ulForText">
+                <li class="liForText"><b>游戏名称：</b>七昼梦</li>
+                <li class="liForText"><b>游戏作者：</b>澜莓（孤岛计划）</li>
+                <li class="liForText"><b>游戏类型：</b>2D解谜RPG</li>
+                <li class="liForText"><b>游戏时长：</b>约20min及以上</li>
+                <li class="liForText"><b>游戏语言：</b>中文</li>
+                <li class="liForText"><b>游戏平台：</b>Windows</li>
+                <li class="liForText"><b>游戏大小：</b>低于100MB</li>
+                <li class="liForText"><b>结局数量：</b>1</li>
+            </ul>
+            <h2>关于角色</h2>
+            <ul class="ulForCharacter">
+                <li class="liForCharacter"><b style="font-size: large;">薄荷（Mint）</b><div><img src="boheHead(large).png"><br>若水县第一中学的高三学生，在一次事故后获得了将记忆带入梦境的能力，并同梦境里的角色展开了一段奇特的旅程。<br>喜欢在冬天吃冰淇淋，因为这样比较<em>爽</em>。</div></li>
+                <li class="liForCharacter"><b style="font-size: large;">企鹅村长</b><br><br><img src="Leader.png"><br>企鹅村的领头，为了让南极再次伟大而煞费苦心。<br>据说有使用任意门的能力。</li>
+            </ul>
+            
+        </div>
+
+        <hr>
+        <a href="https://pan.baidu.com/share/init?surl=o6bwJclXREWWPIlpxJlsHg&pwd=1145" target="_blank" class="download-link">网盘链接</a>
+        <a href="https://www.bilibili.com/video/BV1Jtc7erEFQ" target="_blank" class="show-link">宣传视频</a>
+        
+        
+    </div>
+    <!-- <script>
+        document.querySelector('.download-link').addEventListener('click', function() {
+            alert('Your download will start shortly!');
+        });
+    </script> -->
+</body>
+</html>
