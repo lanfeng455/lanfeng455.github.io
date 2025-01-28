@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unity的垃圾回收（1）</title>
+        <style>
+            .Title {
+                text-align: center;
+                background-color: #c99494;
+                padding: 10px;
+                box-shadow: 0 0 10px #000;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+                /* A border which makes the link like a button*/
+                border: 1px solid #000;
+                padding: 5px;
+                border-radius: 5px;
+
+            }
+            a:hover {
+                color: rgb(253, 194, 152);
+                background-color: #000;
+
+            }
+            ul{
+                list-style-type: none;
+                
+            }
+            li{
+                margin: 10px;
+                /* More beautiful */
+                border-left: 5px solid #000;
+                padding-left: 10px;
+
+            }
+            .Content {
+                padding: 20px;
+            }
+            .Ref {
+                text-align: center;
+                margin-right: 20px;
+            }
+            .MiniCard {
+                background-color: #fffdef;
+                padding: 10px;
+                margin: 10px;
+                /* Be decorated just like a card*/
+                box-shadow: 0 0 2px #000;
+
+            }
+            .Quote {
+                background-color: #f0f0f0;
+                padding: 10px;
+                margin: 10px;
+            }
+            .Story {
+                background-color: #fffbf7;
+                padding: 10px;
+                margin: 10px;
+            }
+            h1{
+                color: #000;
+            }
+            h2{
+                color: #000;
+            }
+            h3{
+                /* Act like a title */
+                background-color: #e2cccc;
+                color: #2a2929;
+                padding: 5px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Title">
+            <h1>Unity的垃圾回收——内存相关技术</h1>
+            <h3 style="background-color:transparent;padding-bottom: 20px;">澜莓</h3>
+            <a class="Ref" href="https://blog.csdn.net/znybn1/article/details/76464896">参考资料1</a>
+            <a class="Ref" href="https://learn.microsoft.com/zh-cn/dotnet/standard/garbage-collection/fundamentals">参考资料2</a>
+            <a class="Ref" href="https://blog.csdn.net/m0_74282605/article/details/128872820">参考资料3</a>
+            <a class="Ref" href="https://blog.csdn.net/daocaokafei/article/details/116207148">参考资料4</a>
+        </div>
+
+        <div class="Content">
+            <h2>引子</h2>
+            <h3>垃圾回收（Garbage Collection）</h3>
+            <p class="Quote">在公共语言运行时 (CLR) 中，垃圾回收器 (GC) 用作自动内存管理器。 垃圾回收器管理应用程序的内存分配和释放。垃圾（Garbage）是存储无用数据的内存的术语，GC(Garbage Collection 垃圾回收)是使这些内存可以再次使用的过程。
+            GC是Unity管理内存的一部分，游戏可能因为GC负担过重而表现不佳（帧率过低、剧烈波动或甚至卡顿），所以GC是引起性能问题的一个常见原因。</p>
+            <h3>物理内存和虚拟内存</h3>
+            <p class="MiniCard">物理内存是计算机系统中<b>实际可用的</b>内存，由硬件直接管理。<br>虚拟内存是<b>抽象概念</b>，通过硬盘空间来模拟物理内存，以<em>扩展可用的内存空间</em>。</p>
+            <p class="Quote">如果<b>计算机缺少运行程序操作所需的RAM空间</b>，则虚拟内存将数据从RAM移动到虚拟内存（分页文件）空间。</p>
+            <p class="Quote">虚拟内存的访问速度比物理内存要慢，因为访问RAM比访问硬盘快得多。</p>
+            
+            <h3>虚拟内存不是虚拟地址空间</h3>
+            <p class="Quote">虚拟内存是一种内存管理技术，它允许进程使用比实际物理内存更多的内存空间。
+                <br>虚拟内存的实现依赖于<em>虚拟地址空间和物理地址空间之间的映射机制</em>。
+                <br>当进程访问虚拟地址时，如果对应的物理页面不在物理内存中，
+                操作系统会从磁盘中读取数据到物理内存中，然后更新<b>页表或段表</b>，使得进程可以继续访问该虚拟地址。</p>
+            <p class="Quote">物理地址空间是计算机硬件实际可用的内存范围，大小受到计算机配置影响。<br>
+            虚拟地址空间是操作系统为每个进程分配的一块地址空间（譬如默认情况下，32位的每个进程享有2GB）。<br>
+            在这个空间中，进程可以自由地分配和使用内存，而不需要关心这些内存实际上映射到物理内存的哪个位置。</p>
+            <p class="Quote">每个进程都有自己单独的虚拟地址空间，同一计算机的所有进程共享相同的<b>物理内存和页文件</b>。</p>
+            <p>进程的虚拟地址空间可以分为以下几个区域</p>
+            <ul>
+                <li>代码区和数据区：来自发起进程的可执行文件</li>
+                <li>运行时堆区域：动态分配内存</li>
+                <li>共享库的内存映射区域：标准的系统库。这个共享库在物理内存中只存储一份，每个虚拟地址空间被映射到这份共享库的物理内存上。</li>
+                <li>用户栈区域：存储局部变量和函数调用</li>
+                <li>系统区域：保留给操作系统使用</li>
+                <li>保留区域：未使用的地址空间</li>
+            </ul>
+
+            <h3>页表和段表是管理虚拟和物理地址空间映射的数据结构</h3>
+            <h4>页表（Page Table）</h4>
+            <ul>
+                <li>分页机制：把虚拟和物理地址空间划分为固定大小（2的幂）的页面（Page）</li>
+                <li>页表：每个进程都有一个页表。页表的本质上是一个数组，每个数组项称为<b>页表项（Page Table Entry，PTE）</b></li>
+                <ul>
+                    <li>物理页面号：虚拟页面（下简称<em>该页面</em>）映射到的物理页面的序号</li>
+                    <li>存在位（Present Bit）：该页面是否映射到物理内存中（如果为0，则表不在，要去磁盘找）</li>
+                    <li>访问位（Access Bit）：该页面是否被访问过</li>
+                    <li>修改位（Modify Bit）：该页面是否被修改过</li>
+                    <li>保护位（Protection Bit）：该页面的访问权限（只读/可读写...）</li>
+                </ul>
+                <li>地址转换：当进程访问虚拟地址时，根据页表查找对应的物理地址。</li>
+            </ul>
+
+            <em>段表（Segment Table）和页表有许多相似之处，可以自行查询，本文不再赘述。</em>
+
+            <h3>进程的内存处理就像做菜</h3>
+            <p class="Story">市谷有咲她奶奶（可执行文件）需要做两道菜（进程），但流星堂现在只有一口锅（物理地址空间）。
+                <br>奶奶决定先做第一道菜，把食材（数据）从冰箱（虚拟地址空间）取出，然后根据页表或段表（地址转换）把材料名（虚拟地址）转换为菜名（物理地址）。
+                <br>一旦材料名被转换为菜名，一旁帮忙的市谷有咲（操作系统）就可以通过菜名（物理地址）接触食材（数据）。
+                <br><s>因为市谷有咲不能直接通过材料名（虚拟地址）确认食材（访问数据）</s>
+                <br>如果食材本来就在锅里（物理内存），那么市谷有咲就可以直接处理食材；但是如果在别的地方（磁盘），就需要通过上述的地址转换搬到锅里（页面置换）。
+                <br>做完了第一道菜后，市谷有咲（操作系统）需要把锅里不用的食材（内存碎片）清理干净，为下一道菜（进程）做准备。
+                <br>具体的方法便是垃圾回收（GC），把材料放回冰箱（释放内存）。    
+            </p>
+
+
+            </p>
+        </div>
+
+    </body>
+</html>
