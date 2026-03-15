@@ -1,370 +1,176 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>LAN的秘密网站</title>  
-    <link rel="stylesheet" href="styles.css">  
-    <link href="styles/background-color.css" rel="stylesheet" type="text/css">
-	<style>
-		.hi a:link{
-			text-decoration:none;
-			color:navy;
-		}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到澜莓凤梨酥的世界</title>
+    <!-- 字体预加载 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 字体组合：标题用Montserrat，正文用Inter，文学区域用Cormorant Garamond增加韵味 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Montserrat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <!-- 引入CSS（稍后添加） -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 整个页面内容 -->
+    <main>
 
-		.hi a:hover{
-			color:#FF5522;
-		}
-	</style>
-</head>  
-<body>  
-    <header>  
-        <nav>  
-            <ul>  
-                <li><a href="#">主页</a></li>  
-                <li><a href="ChatBox.html">留言板</a></li>  
-            </ul>  
-        </nav>  
-    </header>  
-  
-    <div class="container">  
-        <div class="sidebar">  
-            <img src="inco.jpg" alt="Profile Image" class="profile-image">  
-            <h2 class="welcome-message">欢迎来到Lan的秘密基地！</h2>  
-            <p class="profile-summary">数字媒体技术本科生、业余键盘手、学生作家、Unity程序、音乐、特效制作、兼职（天文）摄影爱好者 .etc</p> 
-            <p class="profile-summary2">感谢与你相逢的每一天，祝好！<br/>你可以通过这些网站找到我：</p>  
-	<div class="hi">
-			<li style="list-style-type: '\1F44D';"><a href="https://space.bilibili.com/209197077" class = "hi">我的Bilibili主页</a></li>
-            		<li style="list-style-type: '\1F44D';"><a href="https://www.cnblogs.com/K-aedE" class="hi">我的博客园主页</a></li>
-	    		<li style="list-style-type: '\1F44D';"><a href="https://music.163.com/#/user/home?id=5162280394" class="hi">我的网易云主页（小号）</a></li>
-	</div>
-		
-        </div>  
-  
-        <div class="content">  
-            <button class="tab-button" onclick="showContent('content1')">诗歌</button>  
-            <button class="tab-button" onclick="showContent('content2')">游戏</button>  
-            <button class="tab-button" onclick="showContent('content3')">语言学</button> 
-		<button class="tab-button" onclick="showContent('content4')">计算机</button> 
-  
-            <div id="content1" class="tab-content">  
-                <h2>这里存着我的小诗</h2>  
+        <!-- ==================== 1. 首屏 Hero ==================== -->
+        <section class="hero">
+            <div class="hero-container">
+                <!-- 左侧：身份名片 -->
+                <div class="hero-identity">
+                    <div class="avatar-frame">
+                        <!-- 替换为你自己的头像，建议正方形图片 -->
+                        <img src="images/avatar.jpg" alt="头像" class="avatar">
+                    </div>
+                    <h1 class="name">洪 鑫裕</h1>
+                    <hr>
+                    <p class="signature">Game Developer / Storyteller / Lens-based Artist</p>
+                </div>
 
-		    <h3>2025</h3>
-		    <h4 style="background-color: #9cb9dd">无眠（2025.1.13）</h4>
-                <p>
-                   未来<br/>
-用深夜凝成难溶物<br/>
-用蚕丝编一张网<br/>
-用重力筛过 抖落<br/>
-珍珠项链断开似的<br/>
-<br/>
-熠<br/>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp熠<br/>
-一地星辉<br/>
-                </p>  
+                <!-- 右侧：导航卡片区 -->
+                <div class="hero-nav">
+                    <a href="#about" class="nav-card">
+                        <span class="nav-icon">⌨️</span>  <!-- 可以替换成你喜欢的emoji或图标 -->
+                        <span class="nav-text">关于我</span>
+                    </a>
+                    <a href="#projects" class="nav-card">
+                        <span class="nav-icon">🎮</span>
+                        <span class="nav-text">作品集</span>
+                    </a>
+                    <a href="#writing" class="nav-card">
+                        <span class="nav-icon">✒️</span>
+                        <span class="nav-text">文学馆</span>
+                    </a>
+                    <a href="#contact" class="nav-card">
+                        <span class="nav-icon">📬</span>
+                        <span class="nav-text">联系我</span>
+                    </a>
+                </div>
+            </div>
+            <!-- 氛围背景（浅色渐变） -->
+            <div class="hero-bg"></div>
+        </section>
 
-		<h3>2024</h3>
-		    <h4 style="background-color: #9cb9dd">流星雨夜（2024.12.24）</h4>
-                <p>
-                   该去哪里拾起这场梦<br/>
-水彩 脱手打翻的<br/>
-夜空不再谈论理性<br/>
-昴星团和三页床前故事，被<br/>
-藏进保险箱，<br/>
-直到万年历失忆<br/>
-<br/>
-睡眠是一盘伪善的高利贷<br/>
-执念 无限放大的<br/>
-梅雨不再谈论理性<br/>
-夏至和红色录音带，把<br/>
-歌声遗落在昨天<br/>
-让梦境蚕食，<br/>
-直到我们开始牙痛：<br/>
-<br/>
-该<br/>
-还<br/>
-债<br/>
-了<br/>
-<br/>
-路灯的恶行揭发在十二月的<br/>
-雨夜<br/>
-而我仰头站了太久<br/>
-等不来寒星——我的戈多：<br/>
-或许下一秒就会破茧而出<br/>
-祛魅的念头<br/>
-                </p>  
+        <!-- ==================== 2. 关于我 About ==================== -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">/ 关于我</h2>
+                <div class="about-grid">
+                    <!-- 左侧：长文自我介绍 -->
+                    <div class="about-text">
+                        <p>你好，我是洪鑫裕，FZU数字媒体技术大四学生，主修游戏设计。<br>我始终相信，游戏是当代最迷人的数字娱乐媒介。它是代码逻辑、文学感性与视觉张力交融的十字路口。</p>
+                        <hr><br>
+                        
+                        <p>在校期间，我主要使用Unity C#进行开发，参与过多次游戏制作大赛及Game Jam，独立全栈开发过若干项目。</p>
+                        <p>同时，我习惯用镜头捕捉城市的人文与风景，用文字把感性的思考转化为客观的叙事。这些跨界的练习让我对用户体验、情感表达有更细腻的理解。</p>
+                        <p>目前我正寻找一份<span class="highlight">Unity客户端实习</span>，希望能将我的技术热情与艺术感知结合起来，将跨学科和人本主义的思想带入到有温度的创作中。</p>
+                        <p><span class="highlight">我的技术栈</span>：C# | Unity | RPGMaker | Java | Python | Adobe系 </p>
+                    </div>
+                    <!-- 右侧：荣誉标签 + 生活照 -->
+                    <div class="about-side">
+                        <div class="honor-list">
+                            <span class="honor-tag">2024 吉比特高校 Game Jam 挑战赛银奖 | 最佳剧情诠释奖</span>
+                            <span class="honor-tag">福州大学学生VR畅游协会 副社长</span>
+                            <span class="honor-tag">C#</span>
+                            <span class="honor-tag">Java</span>
+                            <span class="honor-tag">Global Game Jam 2024</span>
+                            <span class="honor-tag">B站自媒体运营</span>
+                            <span class="honor-tag">深度学习</span>
+                            <span class="honor-tag">全国大学生英语竞赛 国家二等奖</span>
+                            <span class="honor-tag">摄影</span>
+                        </div>
+                        <div class="life-photo">
+                            <!-- 替换为你的生活照/工作照 -->
+                            <img src="images/life-shot.jpg" alt="工作日常">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		    
-		    <h4 style="background-color: #9cb9dd">旧街口（2024.12.22）</h4>
-                <p>
-                   和所有街坊一样<br/>
-它诞生，直到耄耋，<br/>
-刚结束人工心脏的术后护理。<br/>
-<br/>
-我曾<br/>
-想登上路口的钟楼。<br/>
-看血液在环岛的沥青里涌动，<br/>
-看底片里外公的那些故事：<br/>
-乌云迫近晋江大桥，<br/>
-海湾收拢，挤出太多的<br/>
-工人如候鸟、<br/>
-车铃如雷响，<br/>
-轮毂压过的地方都落起雨。<br/>
-<br/>
-他漂进沟壑<br/>
-不等站稳便急着抽根。<br/>
-暮春的刺桐红得热烈，好比<br/>
-番薯藤、<br/>
-太公的爆竹、<br/>
-成人礼的三柱香<br/>
-浓缩成胶片上的时间戳，<br/>
-那是习俗还没被定义的日子——<br/>
-<br/>
-东西街今天的职责<br/>
-或许比博物馆更要重大。<br/>
-这次手术太过成功，<br/>
-把一座古城<br/>
-超频成游客所期待的范式。<br/>
-                </p>  
-		    
-		    		<h4 style="background-color: #9cb9dd">是我的海（2024.10.26）</h4>
-		<p>汽笛声已经听不见了，<br/>
-渔船抛锚，扯一根海草证明存在。<br/>
-大海未曾吝啬。<br/>
-丰收与爱的特等奖，<br/>
-和投入呈正相关。<br/>
-<br/>
-港口都眠了。<br/>
-呼吸运载乌黑的思绪<br/>
-上岸、<br/>
-潦草散场——作为运费<br/>
-蓝玛瑙铺陈一地。<br/>
-<br/>
-暖橘色的小熊<br/>
-夜灯、圆月晕开了<br/>
-少年一纸青色的希冀。<br/>
-做个好梦，<br/>
-愿你每一天都。<br/></p>
-		    
-		<h4 style="background-color: #9cb9dd">夜行（2024.10.18）</h4>
-		<p>气团凝结的黑暗撕开了<br/>
-两块褪黑素：<br/>
-一块是我，<br/>
-一块是云翳后的月亮。<br/>
-<br/>
-夜是我的港湾。<br/>
-白日梦所书写的童话，<br/>
-麻雀讲给同伴听，<br/>
-我讲给港湾听。<br/></p>
+        <!-- ==================== 3. 作品集 Projects ==================== -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">/ 作品集</h2>
+                <div class="project-grid" id="project-grid">
+                    <!-- 项目卡片会通过JavaScript动态渲染，暂时留空 -->
+                </div>
+            </div>
+        </section>
 
-		    <h4 style="background-color: #9cb9dd">薄荷（2024.9.26）</h4>
-                <p>
-                    唯一的期待是那抹橙红，<br/>
-七八点太阳的样子。<br/>
-伞面遮不住三九天的迷蒙、<br/>
-挡不住汽笛喧哗，<br/>
-一朵蘑菇彳亍在赋格的城市。<br/>
-<br/>
-不依靠耳朵也能捕获他人的话语，<br/>
-一个字节创生一片地上的云。<br/>
-拾荒的狗群卧在树下——<br/>
-枯黄的草甸是四四拍的乐谱，<br/>
-每条狗都蜷缩成了八分音符。<br/>
-<br/>
-踏过无休止延长的路，<br/>
-浸润了红砖的冷雨模进<br/>
-浸润了我的冷雨。<br/>
-此刻仅剩心愿一个——<br/>
-裹进土里缺省，<br/>
-然后自诩为一株薄荷。<br/>
-                </p>  
-		
-		<h3>2023</h3>
-                <h4 style="background-color: #ddbd9c">薄荷（2023.12.16）</h4>
-                <p>
-                    唯一的期待是那一抹橙红<br/>
-                    七八点太阳的样子<br/>
-                    伞面挡不住三九天雨的迷蒙<br/>
-                    挡不住汽笛喧哗<br/>
-                    一朵蘑菇彳亍在赋格的城市<br/><br/>
+        <!-- ==================== 4. 文学馆 Writing ==================== -->
+        <section class="writing" id="writing">
+            <div class="container">
+                <h2 class="section-title">/ 文学馆</h2>
+                
+                <!-- 竖排分类目录区 -->
+                <div class="writing-categories">
+                    <div class="category-vertical" data-category="game-essay">游·戏·技·术</div>
+                    <div class="category-vertical" data-category="short-story">诗·歌·小·说</div>
+                    <div class="category-vertical" data-category="photo-essay">摄·影·随·笔</div>
+                    <div class="category-vertical" data-category="dev-blog">开·发·札·记</div>
+                </div>
 
-                    不依靠耳朵也能捕获他人的话语<br/>
-                    嘴一张 就创生出一片地上的云<br/>
-                    拾荒的狗群卧在树下<br/>
-                    枯黄的草甸是四四拍的乐谱<br/>
-                    每一条狗都蜷缩成了八分音符<br/><br/>
+                <!-- 文章列表容器（点击分类后显示） -->
+                <div class="writing-articles-container">
+                    <!-- 游戏评论列表 -->
+                    <div class="article-list" id="game-essay-list">
+                        <a href="#" class="article-item">论游戏中的“物哀” —— 从《风之旅人》到《对马岛之魂》</a>
+                        <a href="#" class="article-item">失败机制的情感价值：为什么我们在游戏里享受“死掉”</a>
+                        <a href="#" class="article-item">开放世界中的环境叙事：以《艾尔登法环》为例</a>
+                    </div>
+                    <!-- 短篇小说列表 -->
+                    <div class="article-list" id="short-story-list">
+                        <a href="#" class="article-item">《最后一个守夜人》</a>
+                        <a href="#" class="article-item">《电梯里的猫》</a>
+                        <a href="#" class="article-item">《雨季不再来》</a>
+                    </div>
+                    <!-- 摄影随笔列表 -->
+                    <div class="article-list" id="photo-essay-list">
+                        <a href="#" class="article-item">街头几何：光影与线条的对话</a>
+                        <a href="#" class="article-item">色彩笔记：为什么我喜欢在阴天拍照</a>
+                    </div>
+                    <!-- 开发札记列表 -->
+                    <div class="article-list" id="dev-blog-list">
+                        <a href="#" class="article-item">Unity Shader Graph 实现简易水波效果</a>
+                        <a href="#" class="article-item">对话系统设计：从树形结构到实时打断</a>
+                        <a href="#" class="article-item">Game Jam 复盘：48小时，我们做了一款关于“回声”的游戏</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    绻恋着泉五的温室花园<br/>
-                    阳光漫射 流水潺潺 莺语蝶飞<br/>
-                    只想裹进土里 缺省<br/>
-                    自诩为一株薄荷<br/>
-                </p>  
+        <!-- ==================== 5. 联系 Contact ==================== -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">/ 联系我</h2>
+                <p>QQ: 1315150186 <br> 联系电话：+86 13805955765</p>
+                <div class="contact-links">
+                    <a href="https://github.com/lanfeng455" target="_blank">GitHub</a>
+                    <a href="https://space.bilibili.com/209197077" target="_blank">Bilibili</a>
+                    <a href="mailto:lanfeng0312@163.com">Email</a>
+                    <!-- <a href="#" class="resume-btn">下载简历</a> -->
+                </div>
+                <p class="contact-note">📌 目前base福州，五月起可到岗实习</p>
+            </div>
+        </section>
+    </main>
 
-                <h4 style="background-color: #ddbd9c">诺亚方舟（2023.12.8）</h4>
-                <p>
-                    陆地终于被浇灌为海洋<br/>
-                    整整四十个昼夜 不见天晴<br/>
-                    这是谁降下的神罚<br/>
-                    耶和华 赤松子 或者另有其人？<br/><br/>
+    <!-- ==================== 作品集弹窗 Modal ==================== -->
+    <div class="modal" id="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <!-- 动态填充内容 -->
+            </div>
+        </div>
+    </div>
 
-                    透支十年的积蓄 买一张船票<br/>
-                    七层楼高的船身 随机分配的生活舱室<br/>
-                    我也终于知晓<br/>
-                    世界上不止一艘诺亚方舟<br/><br/>
-
-                    每周打开围栏三次<br/>
-                    柠檬一样挤出水手和牲畜<br/>
-                    与其当个麻木的人<br/>
-                    不如混成趋利避害的动物<br/>
-                    定量供给的果葡糖浆 面对天灾曲水流觞<br/>
-                    觥筹交错 调和一池浑浊廉价的情谊<br/><br/>
-
-                    没有雇佣清洁工的需求<br/>
-                    巨浪迎面扑来<br/>
-                    红的餐布 白的包装袋 黄的蟹壳和鱼刺<br/>
-                    甜的 咸的 酸的 混杂着前天的记忆<br/>
-                    统统冲进港湾 驶离<br/><br/>
-
-                    反正船下的世界未必比船上来得干净<br/>
-                    熊猫这么说着 身着医装的狐狸递来无名药盒<br/>
-                    “五毫克的次氯酸钠 分十六次服用”<br/>
-                    “过分焦虑对未来无益<br/>
-                    放松点 我的老伙计”<br/><br/>
-
-                    巨浪顷刻退去 围栏上锁<br/>
-                    一根树枝搁浅在我的喉头<br/>
-                    撕碎<br/>
-                    诺亚 方 舟 的船票<br/>
-                    “这里没有一丝一毫值得我去留念<br/>
-                    ——<br/>
-                                    雨还要等多久才停”<br/>
-                </p>  
-
-                <h4 style="background-color: #ddbd9c">烟花（2023.11.28）</h4>
-                <p>烟花<br/>
-                    寿宴和婚宴的常客<br/>
-                    点燃引信 火药冲上高空 绽放<br/>
-                    给予观众刹那的惊奇<br/><br/>
-                    这个夜晚 巨大的响声此起彼伏<br/>
-                    仿佛声源不在城市上空<br/>
-                    仿佛星体引爆在每个游子的胸腔<br/>
-                    仿佛暂时将他们的时间凝滞<br/><br/>
-                    带他们回到学校门口<br/>
-                    听一声砰 装一袋热气腾腾的爆米花<br/>
-                    再回到向下的老房子<br/>
-                    咚咚地 砌上一面坚实的围墙<br/>
-                    顺便给父母买一副合金拐杖<br/>
-                    好让他们的脚步声和自己一样清脆响亮<br/><br/>
-                    转瞬即逝的烟花<br/>
-                    正如人类 庄稼 田野<br/>
-                    以及房屋和社会<br/>
-                    从文人第一次把时间比作长河算起<br/>
-                    它的流量不过是上亿次火药升起又消亡的总和<br/><br/>
-
-                    这个夜晚 漫天洒满人造的流星<br/>
-                    千万人的回忆 千万人的愿景<br/>
-                    细细地磨碎 抓紧时间糅合到火药里<br/>
-                    无意或试图让传说中的天帝看见<br/>
-                </p>  
-
-                <h4 style="background-color: #ddbd9c">流星雨夜（2023.11.13）</h4>
-                <p>去看流星 你说<br/>
-                    并排躺在绿茵场地<br/>
-                    看牛郎和织女升到中天<br/>
-                    只可惜城市的光线把银河隐蔽<br/><br/>
-                    我的眼力不及你<br/>
-                    捕捉到的 是经你提醒的星<br/>
-                    你所雀跃的<br/>
-                    在我看来不过是万千沙滩上的一粒<br/><br/>
-                    我的记忆不及你<br/>
-                    记不清流星雨的峰时<br/>
-                    抱歉 它们是很重要的吧<br/>
-                    是你的第二个生日 是第二人生的开始<br/><br/>
-                    月升 潮涨<br/>
-                    万千沙滩上的两粒<br/>
-                    月落 潮息 我们两条<br/>
-                    不再有交集的前途啊<br/><br/>
-                    哪可能笑话你<br/>
-                    冻雨再一次打湿窗内的红枫<br/>
-                    哪里能笑话你<br/>
-                    我撑起伞 去看流星<br/>
-                </p>  
-
-                <h4 style="background-color: #ddbd9c">云（2023.11.10）</h4>
-                <p> 云<br/>
-                    横向的云<br/>
-                    纵向的云<br/>
-                    水汽上升液化的云<br/>
-                    飞机尾部凝结的云<br/>
-                    地球睡着了 在宇宙老师的课上<br/><br/>
-                    风吹过<br/>
-                    打了一阵寒颤<br/>
-                    连着手中白色的记号笔<br/>
-                    在自己的笔记本上划下新的痕迹<br/>
-                </p>  
-
-                <h4 style="background-color: #ddbd9c">无眠（2023.9.15）</h4>
-                <p>嘈杂的思绪 从阖眼起<br/>
-                    萌芽 交融 变化<br/>
-                    我的心脏要睡了 我的身体要睡了<br/>
-                    愚钝的大脑对此一无所知<br/><br/>
-                    是一面战场的军鼓 我的心脏<br/>
-                    从空洞的胸腔 到空洞的腹腔<br/>
-                    从颈动脉 到桡动脉<br/>
-                    此起彼伏 回荡着黑夜为我而敲击的警告<br/>
-                </p>  
-
-		<h3>2022</h3>
-                <h4 style="background-color: #ddbd9c">虚无（2022.11.14）</h4>
-                <p>灰色的夜晚，我在踱步<br/>
-                    踱步于冷白的灯火下<br/>
-                    灰色的虚无将我包裹<br/>
-                    我抬头<br/><br/>
-                    抬头<br/>
-                    视线投向了那片灰色的天空<br/>
-                    火红的 不知名的恒星<br/>
-                    是灰色天穹的一颗瞳仁<br/><br/>
-                    瞳仁<br/>
-                    它不认识我 我们只是这样对视着<br/>
-                    广袤宇宙的乐章中 我和它<br/>
-                    不过是微不足道的十六分音符<br/><br/>
-                    『就算是装饰音 不也是必不可少的吗？』<br/>
-                    它开口了 那来自千万年前的喉音<br/>
-                    我笃定了 或许 我们曾经在一起生活过<br/><br/>
-                    狂风袭来 天空阖上了眼睛<br/>
-                    究竟是谁有这样的神通<br/>
-                    借助苍天的神力与我对话呢？<br/>
-                    </p>  
-            </div>  
-  
-            <div id="content2" class="tab-content">  
-                <h3>我的游戏作品</h3>
-		    
-		<div class="hi">
-			<a href = "NanaChume/NanaChume.html" target="_blank" class = "hi">七昼梦</a>
-<!-- 			<a href="DFS_Lan.html" target="_blank" class="hi">2024.6.16更新：深度优先搜索 Java实现（附注释）</a>
-			</br>
-			<a href="BFS_Lan.html" target="_blank" class="hi">2024.6.14更新：广度优先搜索 Java实现（附注释）</a>
-			</br>
-			<a href="01_Lan.html" target="_blank" class="hi">2024.6.13更新：简单动态规划0-1背包 Java实现（附注释）</a> -->
-		</div>
-		
-
-            </div>  
-  
-            <div id="content3" class="tab-content">  
-		<h3>日语</h3>
-		    <a href="Language/Japanese/250127/250127.html" target="_blank" class="hi">文节（2025/1/27）</a>
-            </div>  
-
-	<div id="content4" class="tab-content">  
-		    <a href="Unity/GarbageCollection1.html" target="_blank" class="hi">垃圾回收其一（内存技术）（2025/1/28）</a>
-		<a href="Unity/Dictionary.html" target="_blank" class="hi">Dictionary（2025/1/31）</a>
-            </div>  
-        </div>  
-    </div>  
-  
-    <script src="script.js"></script>  
-</body>  
+    <!-- 引入JavaScript -->
+    <script src="script.js"></script>
+</body>
 </html>
