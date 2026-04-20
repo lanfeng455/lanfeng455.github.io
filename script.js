@@ -114,7 +114,8 @@ const writingsData = {
         { title: "该模块还在开发中，请谅解！", link: "#" },
     ],
     "photo-essay": [
-        { title: "该模块还在开发中，请谅解！", link: "#" },
+        // { title: "该模块还在开发中，请谅解！", link: "#" },
+        {title: "（2026）沉没成本、锚定效应、机会成本", link: "pages/psychology_1.html"},
     ],
     "dev-blog": [
         { title: "(2025) 像素游戏中，PPU的重要性", link: "https://www.bilibili.com/video/BV1Ebg7zXEF8"},
