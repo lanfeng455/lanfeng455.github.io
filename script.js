@@ -9,7 +9,7 @@ const projectsData = [
         longDescription: "灵感源自《三伏》《黑森町绮谭》及世纪初免费恐怖JRPG。玩家在名为<color=#9876C5>梦世界</color>的非现实世界探索，通过收集记忆碎片，逐渐拼凑出主角<color=#FFDC88>何芰</color>的身世，实现寿命论下的价值实现。",
         image: "images/project-ISOLAND.jpg",
         techStack: ["Unity", "C#", "Shader Graph", "OOP", "Addressables"],
-        // link: "https://github.com/你的用户名/darktide"
+        link: "https://github.com/lanfeng455/lanfeng455.github.io/releases/latest"
     },
     {
         id: 2,
