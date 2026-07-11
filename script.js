@@ -360,3 +360,138 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('📝 当前项目数量：', projectsData.length);
     console.log('📚 文学馆分类数量：', Object.keys(writingsData).length);
 });
+
+// ===============================
+// Background Music
+// ===============================
+
+
+const bgm =
+document.getElementById("bgm");
+
+
+const musicButton =
+document.getElementById("music-toggle");
+
+
+
+let musicPlaying = false;
+
+
+
+// 音量
+
+bgm.volume = 0.35;
+
+
+
+// 检查用户之前设置
+
+const musicDisabled =
+localStorage.getItem("music-disabled");
+
+
+
+if(musicDisabled === "true"){
+
+    musicPlaying=false;
+
+}
+
+
+
+
+
+function playMusic(){
+
+    bgm.play()
+    .then(()=>{
+
+        musicPlaying=true;
+
+        musicButton.classList.add(
+            "playing"
+        );
+
+    })
+    .catch(()=>{
+
+        console.log(
+            "等待用户交互"
+        );
+
+    });
+
+}
+
+
+
+function pauseMusic(){
+
+    bgm.pause();
+
+    musicPlaying=false;
+
+    musicButton.classList.remove(
+        "playing"
+    );
+
+}
+
+
+
+
+// 第一次点击页面启动
+
+document.addEventListener(
+"click",
+()=>{
+
+    if(
+        !musicPlaying &&
+        musicDisabled !== "true"
+    ){
+
+        playMusic();
+
+    }
+
+},
+{
+    once:true
+});
+
+
+
+
+
+// 按钮控制
+
+musicButton.onclick =
+function(e){
+
+
+    e.stopPropagation();
+
+
+    if(musicPlaying){
+
+        pauseMusic();
+
+        localStorage.setItem(
+            "music-disabled",
+            "true"
+        );
+
+    }
+    else{
+
+        localStorage.removeItem(
+            "music-disabled"
+        );
+
+        playMusic();
+
+    }
+
+};
