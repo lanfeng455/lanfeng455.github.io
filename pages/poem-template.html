@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>文章标题 · 你的名字</title>
+    
+    <!-- 字体引入（与主页保持一致） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Montserrat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <!-- 复用主样式，并添加文章页专属样式 -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="article.css">
+</head>
+<body class="article-page">
+    <!-- 顶部导航：返回主页 -->
+    <header class="article-header">
+        <div class="article-header-inner">
+            <a href="../index.html" class="back-link">
+                <span class="back-arrow">←</span> 返回作品集
+            </a>
+            <div class="article-site-title">文学馆 · 札记</div>
+        </div>
+    </header>
+
+    <main class="article-main">
+        <div class="article-container">
+            <!-- 文章元信息 -->
+            <div class="article-meta">
+                <div class="article-category">[分类名称]</div>
+                <h1 class="article-title">文章标题</h1>
+                <div class="article-date">
+                    <span class="date-icon">📅</span> 2024.XX.XX
+                    <span class="reading-time"> · 约 X 分钟</span>
+                </div>
+            </div>
+
+            <!-- 文章封面图（可选） -->
+            <div class="article-cover">
+                <img src="../images/article-cover.jpg" alt="文章封面" onerror="this.style.display='none'">
+            </div>
+
+            <!-- 文章正文 -->
+            <div class="article-content">
+                <p>这里是文章的开头段落。你可以自由地书写任何内容——游戏评论、短篇小说、摄影随笔，或者开发心得。</p>
+                
+                <h2>一级标题示例</h2>
+                <p>正文内容。深色主题下的阅读体验经过特别优化，大段文字也不会让眼睛疲劳。</p>
+                
+                <h3>二级标题示例</h3>
+                <p>继续书写你的想法。可以用 <strong>粗体</strong> 强调重点，或者用 <em>斜体</em> 表达特殊情感。</p>
+                
+                <blockquote>
+                    引用块示例。可以用来放置重要的引文或思考片段。
+                </blockquote>
+                
+                <p>如果需要插入代码（比如技术札记），可以用 <code>inline code</code> 或者代码块：</p>
+                <pre><code>// 代码示例
+void Start() {
+    Debug.Log("Hello from article!");
+}</code></pre>
+                
+                <p>如果需要插入图片，确保图片在 <code>../images/</code> 文件夹中：</p>
+                <figure>
+                    <img src="../images/article-inline.jpg" alt="配图说明">
+                    <figcaption>配图说明文字</figcaption>
+                </figure>
+                
+                <hr>
+                
+                <p>文章结束语。感谢阅读。</p>
+            </div>
+
+            <!-- 文章底部：返回链接 + 分享（可选） -->
+            <div class="article-footer">
+                <a href="../index.html#writing" class="back-to-writing">
+                    <span class="back-arrow">←</span> 返回文学馆
+                </a>
+                <div class="article-divider"></div>
+                <p class="article-signature">—— 写于[城市/地点]</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部简单版权（可选） -->
+    <footer class="article-footer-note">
+        <p>© 2024 你的名字 · 保留所有权利</p>
+    </footer>
+</body>
+</html>
