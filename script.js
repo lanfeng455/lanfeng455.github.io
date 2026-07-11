@@ -81,7 +81,7 @@ const projectsData = [
         id: 8,
         title: "一纸成书 · 现代诗",
         category: "文学创作",
-        year: "2025",
+        year: "2024-2026",
         description: "将青年诗人的现代诗通过一页A4纸进行集成的“收藏品”，成本低廉。",
         longDescription: "将青年诗人的现代诗通过一页A4纸进行集成的“收藏品”，成本低廉。在福州大学城各文学社有一定影响力。",
         image: "images/project-poem.jpg",
@@ -114,10 +114,10 @@ const writingsData = {
         { title: "该模块还在开发中，请谅解！", link: "#" },
     ],
     "photo-essay": [
-        // { title: "该模块还在开发中，请谅解！", link: "#" },
         {title: "（2026）沉没成本、锚定效应、机会成本", link: "pages/psychology_1.html"},
     ],
     "dev-blog": [
+        { title: "🔴 (2026)【开发日志#1】关于我想把本科毕设送上Steam的那些事", link: "https://www.bilibili.com/video/BV1B9j266Edy"},
         { title: "(2025) 像素游戏中，PPU的重要性", link: "https://www.bilibili.com/video/BV1Ebg7zXEF8"},
         { title: "⭐ (2025) 我生命中的第一次实习", link: "https://www.bilibili.com/video/BV1xaugzkEc3"},
         { title: "(2024) Particle System实现简单的仙女棒效果", link: "https://www.bilibili.com/video/BV1ZVtHeDE14"},

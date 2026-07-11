@@ -1,78 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>欢迎来到澜莓凤梨酥的世界</title>
-    <!-- 字体预加载 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- 字体组合：标题用Montserrat，正文用Inter，文学区域用Cormorant Garamond增加韵味 -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Montserrat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <!-- 引入CSS（稍后添加） -->
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+
+<meta 
+name="viewport" 
+content="width=device-width, initial-scale=1.0">
+
+
+<title>
+澜莓凤梨酥 | Game Developer & Storyteller
+</title>
+
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
+
+
 <body>
-    <!-- 整个页面内容 -->
-    <main>
 
-        <!-- ==================== 1. 首屏 Hero ==================== -->
-        <section class="hero">
-            <div class="hero-container">
-                <!-- 左侧：身份名片 -->
-                <div class="hero-identity">
-                    <div class="avatar-frame">
-                        <!-- 替换为你自己的头像，建议正方形图片 -->
-                        <img src="images/avatar.jpg" alt="头像" class="avatar">
-                    </div>
-                    <h1 class="name">洪 鑫裕</h1>
-                    <hr>
-                    <p class="signature">Game Developer / Storyteller / Lens-based Artist</p>
-                </div>
+<main>
 
-                <!-- 右侧：导航卡片区 -->
-                <div class="hero-nav">
-                    <a href="#about" class="nav-card">
-                        <span class="nav-icon">⌨️</span>  <!-- 可以替换成你喜欢的emoji或图标 -->
-                        <span class="nav-text">关于我</span>
-                    </a>
-                    <a href="#projects" class="nav-card">
-                        <span class="nav-icon">🎮</span>
-                        <span class="nav-text">作品集</span>
-                    </a>
-                    <a href="#writing" class="nav-card">
-                        <span class="nav-icon">✒️</span>
-                        <span class="nav-text">文学馆</span>
-                    </a>
-                    <a href="#contact" class="nav-card">
-                        <span class="nav-icon">📬</span>
-                        <span class="nav-text">联系我</span>
-                    </a>
-                </div>
+
+<!-- =========================
+Hero
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+
+        <div class="hero-identity">
+
+
+            <div class="avatar-frame">
+
+                <img 
+                src="images/avatar.jpg"
+                alt="头像"
+                class="avatar">
+
             </div>
-            <!-- 氛围背景（浅色渐变） -->
-            <div class="hero-bg"></div>
-        </section>
 
-        <!-- ==================== 2. 关于我 About ==================== -->
-        <section class="about" id="about">
-            <div class="container">
-                <h2 class="section-title">/ 关于我</h2>
-                <div class="about-grid">
-                    <!-- 左侧：长文自我介绍 -->
-                    <div class="about-text">
-                        <p>你好，我是洪鑫裕，FZU数字媒体技术大四学生，主修游戏设计。<br>我始终相信，游戏是当代最迷人的数字娱乐媒介。它是代码逻辑、文学感性与视觉张力交融的十字路口。</p>
-                        <hr><br>
-                        
-                        <p>在校期间，我主要使用Unity C#进行开发，参与过多次游戏制作大赛及Game Jam，独立全栈开发过若干项目。</p>
-                        <p>同时，我习惯用镜头捕捉城市的人文与风景，用文字把感性的思考转化为客观的叙事。这些跨界的练习让我对用户体验、情感表达有更细腻的理解。</p>
-                        <p>目前我正寻找一份<span class="highlight">Unity客户端实习</span>，希望能将我的技术热情与艺术感知结合起来，将跨学科和人本主义的思想带入到有温度的创作中。</p>
-                        <p><span class="highlight">我的技术栈</span>：C# | Unity | RPGMaker | Java | Python | Adobe系 </p>
-                    </div>
-                    <!-- 右侧：荣誉标签 + 生活照 -->
-                    <div class="about-side">
-                        <div class="honor-list">
-                            <span class="honor-tag">2024 吉比特高校 Game Jam 挑战赛银奖 | 最佳剧情诠释奖</span>
+
+            <h1 class="name">
+                澜莓凤梨酥
+            </h1>
+
+
+            <p class="signature">
+                Game Developer /
+                Storyteller /
+                Multimedia Lover
+            </p>
+
+            <hr class="hero-divider">
+
+
+            <p class="hero-intro">
+
+                用代码构建未来，
+                <br>用文字和影像保存现在。
+
+            </p>
+
+
+
+            <div class="hero-tags">
+
+                <span>
+                    游戏开发
+                </span>
+
+                <span>
+                    叙事设计
+                </span>
+
+                <span>
+                    摄影摄像
+                </span>
+
+                <span>
+                    现代诗歌
+                </span>
+
+
+            </div>
+
+            <div class="hero-status">
+
+                <span>
+                    📍 广州
+                </span>
+
+                <span>
+                    🎓 HKUST(GZ)
+                </span>
+
+                <span>
+                    🎮 孤岛开发中
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <nav class="hero-nav">
+
+
+            <a href="#about" class="nav-card">
+
+                <span class="nav-icon">
+                    ⌨
+                </span>
+
+                <span class="nav-text">
+                    关于我
+                </span>
+
+            </a>
+
+
+
+            <a href="#now" class="nav-card">
+
+                <span class="nav-icon">
+                    ◌
+                </span>
+
+                <span class="nav-text">
+                    最近动态
+                </span>
+
+            </a>
+
+
+
+
+            <a href="#projects" class="nav-card">
+
+                <span class="nav-icon">
+                    ◇
+                </span>
+
+                <span class="nav-text">
+                    作品集
+                </span>
+
+            </a>
+
+
+
+
+            <a href="#writing" class="nav-card">
+
+                <span class="nav-icon">
+                    ✒
+                </span>
+
+                <span class="nav-text">
+                    文学馆
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+    </div>
+
+
+    <div class="hero-bg"></div>
+
+
+</section>
+
+
+
+
+
+<!-- =========================
+About
+========================= -->
+
+
+<section class="about" id="about">
+
+
+<div class="container">
+
+
+<h2 class="section-title">
+/ 关于我
+</h2>
+
+
+
+<div class="about-grid">
+
+
+
+<div class="about-text">
+
+
+<p>
+你好，我是澜莓凤梨酥。
+</p>
+
+
+<p>
+我主攻游戏设计和多媒体叙事。我始终相信，游戏是当代最迷人的数字娱乐媒介。它是代码逻辑、文学感性与视觉张力交融的十字路口。
+</p>
+
+
+<p>
+本科期间主要使用 <span class="highlight">Unity C#</span> 进行开发，独立完成过多个游戏项目。
+</p>
+
+
+<p>
+同时，我习惯通过摄影记录现实，通过文字整理感受。这些跨领域创作让我更加关注用户体验与情感表达。
+</p>
+
+
+<p>
+在未来，我希望能将我的技术热情与艺术感知结合起来，将跨学科和人本主义的思想带入到有温度的创作中。
+</p>
+
+<br>
+
+<p class="about-now-link">
+    获得 FZU <span class="highlight">工学学士</span> 学位（数字媒体技术）之后，
+目前正在 HKUST(GZ) 修读 <span class="highlight">计算艺术硕士</span>。
+</p>
+
+<hr class="soft-divider">
+
+
+</div>
+
+
+
+
+
+<div class="about-side">
+
+
+<div class="honor-list">
+
+<!-- 
+<span class="honor-tag">吉比特高校 Game Jam 挑战赛银奖 | 最佳剧情诠释奖</span>
                             <span class="honor-tag">福州大学学生VR畅游协会 副社长</span>
                             <span class="honor-tag">C#</span>
                             <span class="honor-tag">Java</span>
@@ -80,97 +268,402 @@
                             <span class="honor-tag">B站自媒体运营</span>
                             <span class="honor-tag">深度学习</span>
                             <span class="honor-tag">全国大学生英语竞赛 国家二等奖</span>
-                            <span class="honor-tag">摄影</span>
-                        </div>
-                        <div class="life-photo">
-                            <!-- 替换为你的生活照/工作照 -->
-                            <img src="images/life-shot.jpg" alt="工作日常">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                            <span class="honor-tag">摄影</span> -->
 
-        <!-- ==================== 3. 作品集 Projects ==================== -->
-        <section class="projects" id="projects">
-            <div class="container">
-                <h2 class="section-title">/ 作品集</h2>
-                <div class="project-grid" id="project-grid">
-                    <!-- 项目卡片会通过JavaScript动态渲染，暂时留空 -->
-                </div>
-            </div>
-        </section>
+    <div class="honor-group">
+        <h4>奖项 / Awards</h4>
 
-        <!-- ==================== 4. 文学馆 Writing ==================== -->
-        <section class="writing" id="writing">
-            <div class="container">
-                <h2 class="section-title">/ 文学馆</h2>
-                
-                <!-- 竖排分类目录区 -->
-                <div class="writing-categories">
-                    <div class="category-vertical" data-category="game-essay">游·戏·技·术</div>
-                    <div class="category-vertical" data-category="short-story">诗·歌·小·说</div>
-                    <div class="category-vertical" data-category="photo-essay">摄·影·随·笔</div>
-                    <div class="category-vertical" data-category="dev-blog">开·发·札·记</div>
-                </div>
+        <span class="honor-tag">
+            2024 吉比特高校 Game Jam 银奖
+        </span>
 
-                <!-- 文章列表容器（点击分类后显示） -->
-                <div class="writing-articles-container">
-                    <!-- 游戏评论列表 -->
-                    <div class="article-list" id="game-essay-list">
-                        <a href="#" class="article-item">论游戏中的“物哀” —— 从《风之旅人》到《对马岛之魂》</a>
-                        <a href="#" class="article-item">失败机制的情感价值：为什么我们在游戏里享受“死掉”</a>
-                        <a href="#" class="article-item">开放世界中的环境叙事：以《艾尔登法环》为例</a>
-                    </div>
-                    <!-- 短篇小说列表 -->
-                    <div class="article-list" id="short-story-list">
-                        <a href="#" class="article-item">《最后一个守夜人》</a>
-                        <a href="#" class="article-item">《电梯里的猫》</a>
-                        <a href="#" class="article-item">《雨季不再来》</a>
-                    </div>
-                    <!-- 摄影随笔列表 -->
-                    <div class="article-list" id="photo-essay-list">
-                        <a href="#" class="article-item">街头几何：光影与线条的对话</a>
-                        <a href="#" class="article-item">色彩笔记：为什么我喜欢在阴天拍照</a>
-                    </div>
-                    <!-- 开发札记列表 -->
-                    <div class="article-list" id="dev-blog-list">
-                        <a href="#" class="article-item">Unity Shader Graph 实现简易水波效果</a>
-                        <a href="#" class="article-item">对话系统设计：从树形结构到实时打断</a>
-                        <a href="#" class="article-item">Game Jam 复盘：48小时，我们做了一款关于“回声”的游戏</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <span class="honor-tag">
+            2024 吉比特高校 Game Jam 最佳剧情诠释奖
+        </span>
 
-        <!-- ==================== 5. 联系 Contact ==================== -->
-        <section class="contact" id="contact">
-            <div class="container">
-                <h2 class="section-title">/ 联系我</h2>
-                <p>QQ: 1315150186 <br> 联系电话：+86 13805955765</p>
-                <div class="contact-links">
-                    <a href="https://github.com/lanfeng455" target="_blank">GitHub</a>
-                    <a href="https://space.bilibili.com/209197077" target="_blank">Bilibili</a>
-                    <a href="mailto:lanfeng0312@163.com">Email</a>
-                    <!-- <a href="#" class="resume-btn">下载简历</a> -->
-                </div>
-                <p class="contact-note">📌 目前base泉州，未来base广州</p>
-            </div>
-        </section>
-    </main>
+        <span class="honor-tag">
+            福州大学优秀学生综合奖学金二等奖
+        </span>
 
-    <!-- ==================== 作品集弹窗 Modal ==================== -->
-    <div class="modal" id="project-modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <div class="modal-body">
-                <!-- 动态填充内容 -->
-            </div>
-        </div>
+        <span class="honor-tag">
+            全国大学生英语竞赛 国家二等奖
+        </span>
     </div>
 
-    <!-- 引入JavaScript -->
-    <script src="script.js"></script>
+<div class="honor-group">
+    <h4>技能 / Skills</h4>
+
+    <span class="honor-tag">Unity</span>
+    <span class="honor-tag">C#</span>
+    <span class="honor-tag">Java</span>
+    <span class="honor-tag">Photoshop</span>
+    <span class="honor-tag">Premiere</span>
+    <span class="honor-tag">FL Studio</span>
+</div>
+
+<div class="honor-group">
+    <h4>Others</h4>
+
+    <span class="honor-tag">摄影</span>
+    <span class="honor-tag">B站自媒体</span>
+</div>
+
+
+</div>
+
+
+
+
+<div class="life-photo">
+
+<img 
+src="images/life-shot.jpg"
+alt="工作日常">
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =========================
+Now
+========================= -->
+
+
+<section class="now" id="now">
+
+
+<div class="container">
+
+
+<h2 class="section-title">
+/ 最近动态
+</h2>
+
+
+
+<div class="now-panel">
+
+
+<div>
+
+<h3>
+就读院校和专业
+</h3>
+
+<p>
+HKUST(GZ)
+<br>
+MFA Computational Arts
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+研发项目
+</h3>
+
+<p>
+《孤岛》
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+探索方向
+</h3>
+
+<p>
+游戏 x 视觉设计 x 人工智能
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =========================
+Projects
+========================= -->
+
+
+<section class="projects" id="projects">
+
+
+<div class="container">
+
+
+<h2 class="section-title">
+/ 作品集
+</h2>
+
+
+<div 
+class="project-grid"
+id="project-grid">
+
+<!-- script.js生成 -->
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =========================
+Writing
+========================= -->
+
+
+<section class="writing" id="writing">
+
+
+<div class="container">
+
+
+<h2 class="section-title">
+/ 文学馆
+</h2>
+
+
+
+<div class="writing-categories">
+
+
+<div 
+class="category-vertical"
+data-category="game-essay">
+
+游·戏·技·术
+
+</div>
+
+
+<div 
+class="category-vertical"
+data-category="short-story">
+
+诗·歌·小·说
+
+</div>
+
+
+<div 
+class="category-vertical"
+data-category="photo-essay">
+
+摄·影·随·笔
+
+</div>
+
+
+<div 
+class="category-vertical"
+data-category="dev-blog">
+
+开·发·札·记
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="writing-content">
+
+
+<div 
+class="article-list"
+id="game-essay-list">
+</div>
+
+
+
+<div 
+class="article-list"
+id="short-story-list">
+</div>
+
+
+
+<div 
+class="article-list"
+id="photo-essay-list">
+</div>
+
+
+
+<div 
+class="article-list"
+id="dev-blog-list">
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================
+Contact
+========================= -->
+
+
+<section class="contact" id="contact">
+
+
+<div class="container">
+
+
+<h2 class="section-title">
+/ 联系我
+</h2>
+
+
+<p>
+工作QQ：1260572184
+<br>
+联系电话：+86 13805955765
+</p>
+
+
+
+<div class="contact-links">
+
+<a href="#">
+GitHub
+</a>
+
+
+<a href="#">
+Bilibili
+</a>
+
+
+<a href="#">
+Email
+</a>
+
+
+</div>
+
+
+
+<p class="contact-note">
+
+📌 目前base泉州，未来base广州
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+</main>
+
+
+
+
+
+
+<!-- Modal 保留原结构 -->
+
+
+<!-- Project Modal -->
+
+<div class="modal" id="project-modal">
+
+    <div class="modal-overlay"></div>
+
+
+    <div class="modal-content">
+
+
+        <button class="modal-close">
+            ×
+        </button>
+
+
+        <div class="modal-body">
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+<script src="script.js"></script>
+
+
 </body>
+
+
 </html>
