@@ -186,7 +186,7 @@ section {
     height:1px;
     background:linear-gradient(
         to right,
-        rgba(255, 255, 255, 0.5),
+        rgba(140, 141, 226, 0.5),
         rgba(255,255,255,.05)
     );
 }
