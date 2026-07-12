@@ -53,7 +53,7 @@ body {
     color:var(--text);
 
     font-family:
-
+    "Cormorant Garamond",
     "Noto Serif SC",
     "Microsoft YaHei",
     sans-serif;
@@ -1576,12 +1576,198 @@ section {
 
 }
 
-@media(max-width:900px){
+@media(max-width:1300px){
 
-.side-nav{
+.side-nav a{
 
-    display:none;
+    font-size:0;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#555;
 
 }
 
+
+.side-nav a.active{
+
+    background:#9ab7ff;
+
+}
+
+}
+
+/* --- 优化 Hero 部分 --- */
+.hero-intro {
+    margin-top: 35px;
+    max-width: 480px;
+    font-size: 1.1rem;
+    color: var(--text-soft);
+    line-height: 1.8;
+}
+
+.hero-intro span {
+    color: var(--text);
+    opacity: 0.9;
+}
+
+/* 导航卡片优化 - 增加精致感 */
+.nav-card {
+    height: 160px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.02);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, rgba(154,183,255,0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.nav-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(154,183,255,0.4);
+    background: rgba(154,183,255,0.05);
+}
+
+.nav-card:hover::before {
+    opacity: 1;
+}
+
+.nav-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--blue);
+    margin-bottom: 12px;
+    transition: transform 0.4s;
+}
+
+.nav-card:hover .nav-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+/* --- 优化 About 部分 --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr; /* 调整比例，让左侧更宽一点 */
+    gap: 100px;
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    line-height: 2; /* 增加行高，视觉更舒展 */
+    margin-bottom: 24px;
+}
+
+/* 教育背景卡片化，增加左侧视觉重量 */
+.education-card {
+    margin-top: 40px;
+    padding: 24px;
+    background: rgba(154,183,255,0.03);
+    border-left: 3px solid var(--blue);
+    border-radius: 0 8px 8px 0;
+}
+
+/* 右侧模块化设计 */
+.side-module {
+    margin-bottom: 45px;
+}
+
+.side-title {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--blue);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* 奖项列表：从标签改为极简列表 */
+.award-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.award-list li {
+    font-size: 0.95rem;
+    color: var(--warm);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(232,207,162,0.1);
+    position: relative;
+    padding-left: 20px;
+}
+
+.award-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+/* 技能标签微调 */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-soft);
+    background: rgba(255,255,255,0.02);
+}
+
+/* 图片处理 */
+.side-photo-wrapper {
+    margin-top: 30px;
+    filter: grayscale(0.2);
+    transition: filter 0.4s;
+}
+
+.side-photo-wrapper:hover {
+    filter: grayscale(0);
+}
+
+.side-photo {
+    width: 100%;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+/* 响应式适配 */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 20%) var(--mouse-y, 15%), rgba(154,183,255,0.08), transparent 40%);
+    z-index: -1;
+    pointer-events: none;
 }
