@@ -203,9 +203,9 @@ section {
 
 .avatar-frame {
 
-    width:200px;
+    width:clamp(120px, 12vw, 200px);
 
-    height:200px;
+    height:clamp(120px, 12vw, 200px);
 
     border-radius:50%;
 
@@ -1483,5 +1483,105 @@ section {
 
     box-shadow:
     0 0 20px rgba(154,183,255,.35);
+
+}
+
+.side-nav {
+
+    position:fixed;
+
+    right:clamp(15px, 3vw, 50px);
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    z-index:100;
+
+
+}
+
+.cormorant-text{
+    font-family:
+    "Cormorant Garamond",
+    serif;
+}
+
+
+
+.side-nav a {
+
+    writing-mode:vertical-rl;
+
+    text-orientation:mixed;
+
+    text-decoration:none;
+
+    color:rgba(216,220,232,.45);
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+
+
+.side-nav a::before {
+
+    content:"";
+
+    position:absolute;
+
+    left:-10px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:3px;
+
+    height:0;
+
+    background:#9ab7ff;
+
+    transition:.3s;
+
+}
+
+
+
+.side-nav a:hover,
+.side-nav a.active {
+
+    color:#f0f1f5;
+
+}
+
+
+
+.side-nav a.active::before {
+
+    height:30px;
+
+}
+
+@media(max-width:900px){
+
+.side-nav{
+
+    display:none;
+
+}
 
 }

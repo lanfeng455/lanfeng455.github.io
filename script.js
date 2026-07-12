@@ -495,3 +495,57 @@ function(e){
     }
 
 };
+
+const sections =
+document.querySelectorAll("section");
+
+
+const navLinks =
+document.querySelectorAll(".side-nav a");
+
+
+
+window.addEventListener(
+"scroll",
+()=>{
+
+let current="";
+
+
+sections.forEach(section=>{
+
+const top =
+section.offsetTop;
+
+
+if(
+scrollY >= top - 200
+){
+
+current = section.id;
+
+}
+
+});
+
+
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+
+if(
+link.getAttribute("href")
+===
+"#"+current
+){
+
+link.classList.add("active");
+
+}
+
+});
+
+
+});
