@@ -1771,3 +1771,87 @@ body::after {
     z-index: -1;
     pointer-events: none;
 }
+
+
+@media(max-width:900px){
+
+.about-grid{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.about-side{
+
+    order:-1;
+
+}
+
+}
+
+/* 容器：增加一个有质感的边框或背景，让它像个独立的展示区 */
+.inspiration-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px; /* 稍微拉开间距，更有呼吸感 */
+    margin-top: 40px;
+    padding: 24px;
+    background: rgba(154, 183, 255, 0.02); /* 极淡的底色 */
+    border-radius: 12px;
+    border: 1px dashed rgba(154, 183, 255, 0.15); /* 虚线边框，像裁切线或画框 */
+}
+
+.inspiration-item {
+    width: 72px; /* 稍微放大一点 */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.inspiration-icon {
+    width: 72px;
+    height: 72px;
+    margin: auto;
+    border-radius: 16px; /* 改为大圆角矩形，比纯圆更有“卡片”和“艺术品”的感觉 */
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #15181d;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 增加一点下沉投影 */
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* 悬停时的特殊效果：放大并亮起边框 */
+.inspiration-item:hover {
+    transform: translateY(-8px);
+}
+
+.inspiration-item:hover .inspiration-icon {
+    border-color: var(--blue);
+    box-shadow: 0 0 20px rgba(154, 183, 255, 0.3);
+}
+
+.inspiration-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.3); /* 初始略微去色，让整体色调更统一 */
+    transition: 0.3s;
+}
+
+.inspiration-item:hover img {
+    filter: grayscale(0); /* 悬停时恢复彩色 */
+    transform: scale(1.1);
+}
+
+.inspiration-item span {
+    display: block;
+    margin-top: 12px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--text-soft);
+    font-family: "Noto Serif SC", serif; /* 使用衬线体，呼应整体风格 */
+    opacity: 0.8;
+}
