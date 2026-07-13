@@ -105,10 +105,11 @@ const projectsData = [
 // ==================== 文学馆数据 ====================
 const writingsData = {
     "game-essay": [
-        { title: "【笔记：从Games101到Unity】抗锯齿、过滤模式、Mipmap", link: "https://www.bilibili.com/read/cv39979694" },
-        { title: "【笔记：从Games101到Unity】深度测试、深度缓存、拆解X-Ray效果", link: "https://www.bilibili.com/opus/1007865465336233991" },
-        { title: "【笔记：从Games101到Unity】纹理贴图可不仅仅是模型/精灵的“贴纸”！", link: "https://www.bilibili.com/opus/1008146871557816352" },
-        { title: "【笔记：从Games101到Unity】对X光材质的勘误、深入探究渲染队列", link: "https://www.bilibili.com/opus/1008934289395417156" }
+        { title: "🔴 读书笔记：什么是有意义的娱乐？", link: "pages/article_game_design_1.html"},
+        { title: "【笔记：从Games101到Unity】抗锯齿、过滤模式、Mipmap（外部）", link: "https://www.bilibili.com/read/cv39979694" },
+        { title: "【笔记：从Games101到Unity】深度测试、深度缓存、拆解X-Ray效果（外部）", link: "https://www.bilibili.com/opus/1007865465336233991" },
+        { title: "【笔记：从Games101到Unity】纹理贴图可不仅仅是模型/精灵的“贴纸”！（外部）", link: "https://www.bilibili.com/opus/1008146871557816352" },
+        { title: "【笔记：从Games101到Unity】对X光材质的勘误、深入探究渲染队列（外部）", link: "https://www.bilibili.com/opus/1008934289395417156" }
     ],
     "short-story": [
         { title: "（2026）《云》", link: "pages/poem_1.html" },

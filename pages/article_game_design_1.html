@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏设计读书笔记（一）</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="reading.css">
+</head>
+<body class="reading-page">
+     <!-- ===== 左栏：立绘 ===== -->
+    <aside class="reading-left">
+        <a href="../index.html#writing" class="reading-back-link">← 文学馆</a>
+        <div class="character">
+            <img src="images/meme1.png" alt="角色立绘" onerror="this.style.display='none'">
+        </div>
+        <span class="character-label">· 只是想放个人 ·</span>
+    </aside>
+
+    <!-- 主容器 -->
+    <main class="reading-main">
+        <div class="reading-container">
+
+            <!-- 书籍元信息 -->
+            <div class="book-header">
+                <div class="book-tag">📖 读书笔记</div>
+                <h1 class="book-title">《Rules of Play》</h1>
+                <div class="book-meta">
+                    <span>Katie Salen and Eric Zimmerman</span>
+                    <span class="book-meta-divider">·</span>
+                    <span>第 1 章 第 1 部分</span>
+                    <span class="book-meta-divider">·</span>
+                    <span>2026.07</span>
+                </div>
+                <div class="book-subtitle">Game Design Fundamentals</div>
+            </div>
+
+            <!-- 分割装饰 -->
+            <div class="reading-divider">
+                <span class="divider-line"></span>
+                <span class="divider-diamond">◆</span>
+                <span class="divider-line"></span>
+            </div>
+
+            <!-- 笔记正文 -->
+            <div class="reading-body">
+
+                <!-- 核心观点 -->
+                <div class="reading-section">
+                    <h2 class="section-title">概述</h2>
+                    <p>作为本书的起点，在第一单元，内容围绕游戏设计最核心的概念展开。本文的摘录和解释都源自原书 P31~37 的内容。
+                        从实际情况和个人能力出发，可能会对原文中一些内容进行转译，或在不影响原文含义的情况下，修改部分示例内容。
+                    </p>
+                    <div class="highlight-box">
+                        <p>“成功的游戏设计，是以 <strong>有意义的娱乐（meaningful play）</strong> 为首要目标的。”</p>
+                    </div>
+                </div>
+
+                <!-- 笔记条目 -->
+                <div class="reading-section">
+                    <h2 class="section-title">核心总结</h2>
+
+                    <div class="note-item">
+                        <div class="note-number">01</div>
+                        <div class="note-content">
+                            <h3>当我们在娱乐的时候，我们在娱乐什么？</h3>
+                            <p>游戏意味着一系列的选择和行动（making choices and taking actions）。每次行动都可能产生两种影响，影响整个游戏系统，或者对游戏系统产生新的意义（meaning）。</p>
+                            <br>
+                            <div class="case-card">
+                                <h4>影响整个系统的……</h4>
+                                <p>比方说多结局的RPG《Ib》，玩家每在馆内的重要情节行动时，都会影响到全局变量（Garry的死亡率、Garry的好感度、Mary的好感度……），从而导向不同的剧情走向和结局。</p>
+                            </div>
+                            <div class="case-card">
+                                <h4>产生新的意义的……</h4>
+                                <p>比方说国际象棋，开局的走法影响到中局的战术，中局的选择又很大程度上影响着残局的局势。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-item">
+                        <div class="note-number">02</div>
+                        <div class="note-content">
+                            <h3>定义“有意义的娱乐”的方法：解释法和评估法</h3>
+                            <p>我们已经知道，娱乐是通过决策（选择和行动）展开的。但有些决策并不总令人快乐，比方说回答“中午吃什么”这种问题。
+                                要怎么让决策真正变成游戏？这就是本书，以及游戏设计中需要回答的“意义”。
+                            </p>
+                            <p>在两种不同的语境（视角）下，意义有两种解释方式。</p>
+                            <br>
+                            <h4>解释法（Descriptive Definition）</h4>
+                            <p>娱乐的意义源自 <strong>玩家的行动（player action）和系统的收益（system outcome）</strong> 之间的关系。
+                            这点和 <strong>AMD架构</strong> 中提及的观点有异曲同工之处。玩家通过学习游戏的机制，做出行动，然后通过本次行动获得的收益，
+                        感受到游戏的快感。</p>
+                            <p>以海龟汤游戏为例。猜题人通过行动（提出问题），获得收益（符合其预期的回答），从而感受到愉悦感。这个问题不仅帮助猜题人更靠近真相，也能让猜题人开始自己肯定感爆上。
+                            </p>
+
+                            <br>
+                            <h4>评估法（Evaluative Definition）</h4>
+                            <p>假设 A游戏 和 B游戏 都提供了“有意义的娱乐”，为什么玩家更倾向于其中一个而不是另一个呢？评估法提供了两个评价娱乐有多“有意义”的维度：
+                                <strong>可感知度（discernability）和集成度（intergration）</strong>。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="note-item">
+                        <div class="note-number">03</div>
+                        <div class="note-content">
+                            <h3>可感知度和集成度</h3>
+                            <br>
+                            <h4>可感知度（Discernability）</h4>
+                            <p>简单来说，就是在玩家做出行动之后，能否感知到自身获得的收益？</p>
+                            <p>我们常说的按钮反馈，击杀反馈等，都是为了让玩家能感知到自己的行动 <strong>有效</strong>。</p>
+                
+                            <br>
+                            <h4>集成度（Integration）</h4>
+                            <p>当除了可感知度的这种即时反馈，在一些剧情导向的游戏里（我又要说《Ib》了），玩家的行动可能要在剧情的后段才能被感知到。
+                                这种“行动和收益被集成到游戏更广泛的上下文”的效果，就是所谓的“集成度”。换句话说，集成度反映了当前行动对于未来系统走向的影响。
+                            </p>
+
+                            <br>
+                            <hr>
+                            <p>可感知度和集成度，作为玩家行动的两个导向指标，具有同等价值。即使是在剧情驱动的RPG里，也能看到UI的即时反馈。</p>
+
+                        </div>
+                            <!-- <div class="note-tag">#系统设计</div>
+                            <div class="note-tag">#体验设计</div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 底部 -->
+            <div class="reading-footer">
+                <div class="reading-divider">
+                    <span class="divider-line"></span>
+                    <span class="divider-diamond">◇</span>
+                    <span class="divider-line"></span>
+                </div>
+                <p class="reading-signature">—— 澜莓凤梨酥 编写 ——</p>
+                <a href="../index.html#writing" class="reading-back-bottom">← 回到文学馆</a>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
