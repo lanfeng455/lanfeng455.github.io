@@ -739,57 +739,6 @@
 /* ===== 手机 ===== */
 
 @media(max-width:768px){
-
-
-    .fragment{
-
-        font-size:.95rem;
-
-        opacity:.7;
-
-    }
-
-
-    .fragment:nth-child(1){
-
-        top:15%;
-        left:18%;
-
-    }
-
-
-    .fragment:nth-child(2){
-
-        top:30%;
-        left:65%;
-
-    }
-
-
-    .fragment:nth-child(3){
-
-        top:55%;
-        left:45%;
-
-    }
-
-
-    .fragment:nth-child(4){
-
-        bottom:15%;
-        left:70%;
-
-    }
-
-
-    .fragment:nth-child(5){
-
-        bottom:30%;
-        left:20%;
-
-    }
-
-
     .poem-content{
 
         width:90%;
@@ -803,6 +752,68 @@
 
         font-size:2.5rem;
 
+    }
+
+}
+
+@media(max-width:768px){
+
+    .fragment{
+
+        font-size:1rem;
+
+        opacity:.25;
+
+    }
+
+    .fragment:nth-child(1){
+        top:18%;
+        left:10%;
+    }
+
+    .fragment:nth-child(2){
+        top:28%;
+        left:75%;
+    }
+
+    .fragment:nth-child(3){
+        top:40%;
+        left:25%;
+    }
+
+    .fragment:nth-child(4){
+        top:52%;
+        left:82%;
+    }
+
+    .fragment:nth-child(5){
+        top:60%;
+        left:12%;
+    }
+
+    .fragment:nth-child(6){
+        top:72%;
+        left:65%;
+    }
+
+    .fragment:nth-child(7){
+        top:80%;
+        left:30%;
+    }
+
+    .fragment:nth-child(8){
+        top:48%;
+        left:55%;
+    }
+
+    .fragment:nth-child(9){
+        top:35%;
+        left:50%;
+    }
+
+    .fragment:nth-child(10){
+        top:65%;
+        left:88%;
     }
 
 }
