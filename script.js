@@ -112,7 +112,8 @@ const writingsData = {
         { title: "【笔记：从Games101到Unity】对X光材质的勘误、深入探究渲染队列（外部）", link: "https://www.bilibili.com/opus/1008934289395417156" }
     ],
     "short-story": [
-        { title: "（2026）《云》", link: "pages/poem_1.html" },
+        { title: "（2026）《气味》", link: "pages/poem_2.html"},
+        { title: "（2026）《云》", link: "pages/poem_1.html" }        
     ],
     "photo-essay": [
         {title: "（2026）沉没成本、锚定效应、机会成本", link: "pages/psychology_1.html"},

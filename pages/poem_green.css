@@ -75,7 +75,7 @@
 
 .poem-back {
 
-    color:#3038b8;
+    color:#1e861e;
 
     text-decoration:none;
 
@@ -93,7 +93,7 @@
 
 .poem-badge {
 
-    color:#3038b8;
+    color:#1e861e;
 
     font-size:.75rem;
 
@@ -174,7 +174,7 @@
     height:100vh;
 
 
-    background:#3038b8;
+    background:#48a516;
 
 
     z-index:1;
@@ -247,7 +247,7 @@
     font-weight:600;
 
 
-    color:#3038b8;
+    color:#1e861e;
 
 
 
@@ -265,7 +265,7 @@
     height:2px;
 
 
-    background:#3038b8;
+    background:#1e861e;
 
 
 
@@ -450,7 +450,7 @@
     font-family:'Inter',sans-serif;
     font-size:0.65rem;
     letter-spacing:4px;
-    color:#8790c9;
+    color:#87c9a8;
     margin-bottom:28px;
 }
 
@@ -461,7 +461,7 @@
     font-size:0.7rem;
     letter-spacing:1px;
 
-    color:rgba(48,56,184,.45);
+    color:rgba(25, 107, 50, 0.45);
 }
 
 
@@ -528,7 +528,7 @@
     color:rgba(255,255,255,.22);
 
     -webkit-text-stroke:
-        .5px rgba(48,56,184,.25);
+        .5px rgba(30, 126, 51, 0.25);
 
     text-shadow:
         0 0 3px rgba(255,255,255,.35);
@@ -702,7 +702,7 @@
 
     height:2px;
 
-    background:#3038b8;
+    background:#1f8b43;
 
     margin:8px 0 15px;
 
@@ -823,7 +823,7 @@
     margin-top:40px;
     margin-bottom:55px;
 
-    color:rgba(48,56,184,.45);
+    color:rgba(27, 124, 87, 0.45);
 
     font-size:.8rem;
 
@@ -875,6 +875,7 @@
         serif;
 
 }
+
 
 
 .poem-navigation a{
