@@ -566,3 +566,89 @@
         font-size: 0.55rem;
     }
 }
+
+/* ========== 游戏截图 ========== */
+
+/* 内嵌截图：随文字流动，轻边框，带标题 */
+.game-screenshot {
+    margin: 1.2rem 0 1.2rem 1.5rem;  /* 左缩进，和正文区分 */
+    max-width: 85%;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 47, 167, 0.06);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.02);
+}
+
+.game-screenshot img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.game-screenshot .screenshot-caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    color: rgba(0, 47, 167, 0.25);
+    padding: 0.4rem 0.8rem;
+    letter-spacing: 0.5px;
+    border-top: 1px solid rgba(0, 47, 167, 0.03);
+}
+
+.game-screenshot .screenshot-caption strong {
+    color: rgba(0, 47, 167, 0.4);
+    font-weight: 500;
+}
+
+/* 右浮动截图：文字环绕（适合桌面端） */
+.game-screenshot.float-right {
+    float: right;
+    margin: 0.3rem 0 0.8rem 1.5rem;
+    max-width: 45%;
+}
+
+.game-screenshot.float-left {
+    float: left;
+    margin: 0.3rem 1.5rem 0.8rem 0;
+    max-width: 45%;
+}
+
+/* 截图组：多张截图并排 */
+.screenshot-group {
+    display: flex;
+    gap: 1rem;
+    margin: 1.2rem 0 1.2rem 1.5rem;
+    flex-wrap: wrap;
+}
+
+.screenshot-group .game-screenshot {
+    flex: 1;
+    min-width: 160px;
+    max-width: 48%;
+    margin: 0;
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 768px) {
+    .game-screenshot {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .game-screenshot.float-right,
+    .game-screenshot.float-left {
+        float: none;
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    .screenshot-group {
+        margin-left: 0;
+        flex-direction: column;
+    }
+
+    .screenshot-group .game-screenshot {
+        max-width: 100%;
+        min-width: auto;
+    }
+}

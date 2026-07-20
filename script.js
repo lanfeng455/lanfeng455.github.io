@@ -105,7 +105,8 @@ const projectsData = [
 // ==================== 文学馆数据 ====================
 const writingsData = {
     "game-essay": [
-        { title: "🔴 读书笔记：什么是有意义的娱乐？", link: "pages/article_game_design_1.html"},
+        { title: "🔴 读书笔记：符号学、语境、结构与符号的意义", link: "pages/article_game_design_2.html"},
+        { title: "读书笔记：什么是有意义的娱乐？", link: "pages/article_game_design_1.html"},
         { title: "【笔记：从Games101到Unity】抗锯齿、过滤模式、Mipmap（外部）", link: "https://www.bilibili.com/read/cv39979694" },
         { title: "【笔记：从Games101到Unity】深度测试、深度缓存、拆解X-Ray效果（外部）", link: "https://www.bilibili.com/opus/1007865465336233991" },
         { title: "【笔记：从Games101到Unity】纹理贴图可不仅仅是模型/精灵的“贴纸”！（外部）", link: "https://www.bilibili.com/opus/1008146871557816352" },
