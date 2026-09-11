@@ -1,0 +1,1180 @@
+:root {
+  --bg: #0d1036;
+  --panel: #32165a;
+  --text: #f4f2ee;
+  --muted: #aaa9bb;
+  --accent: #f0d85c;
+  --line: rgba(244, 242, 238, 0.72);
+
+  --serif:
+    "Noto Serif SC",
+    "Source Han Serif SC",
+    "Noto Serif CJK SC",
+    serif;
+
+  --sans:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  --detail-media-max-height: 420px;
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ==================================================
+   Main
+================================================== */
+
+.site-shell {
+  width: min(1120px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 30px 0 80px;
+}
+
+
+/* ==================================================
+   Profile
+================================================== */
+
+.profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  padding-bottom: 27px;
+  border-bottom: 1px solid var(--line);
+}
+
+
+.avatar {
+  width: 154px;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #f7f6f2;
+}
+
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.profile-copy {
+  padding-top: 2px;
+  flex: 1;
+}
+
+
+.profile h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+
+.positioning {
+  margin: 10px 0 0;
+  font-size: 21px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+
+.experience {
+  margin: 14px 0 0;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+
+.bio {
+  max-width: 680px;
+  margin: 16px 0 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #d8d5df;
+}
+
+
+/* ==================================================
+   Section Heading
+================================================== */
+
+.section-heading {
+  padding: 13px 0 14px;
+  text-align: center;
+  font-size: 22px;
+  border-bottom: 1px solid var(--line);
+  /* border-top: 1px solid var(--line);
+  margin-top: 10px; */
+}
+
+
+/* ==================================================
+   Featured Projects
+================================================== */
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  margin-top: 34px;
+}
+
+
+.featured-project {
+  position: relative;
+  min-width: 0;
+}
+
+
+/* 代表作卡片覆盖普通作品卡片尺寸 */
+
+.featured-project .project-card {
+  width: calc(100% - 28px);
+  max-width: none;
+}
+
+
+/* 左侧代表作 */
+
+.featured-team .project-card {
+  margin-left: 28px;
+  margin-right: 0;
+}
+
+
+.featured-team .featured-axis {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 28px;
+  height: 1px;
+  background: var(--line);
+}
+
+
+.featured-team .featured-axis::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: -4px;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+
+/* 右侧代表作 */
+
+.featured-personal .project-card {
+  margin-left: 0;
+  margin-right: 28px;
+}
+
+
+.featured-personal .featured-axis {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  width: 28px;
+  height: 1px;
+  background: var(--line);
+}
+
+
+.featured-personal .featured-axis::before {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  top: -4px;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+
+/* ==================================================
+   Project Card
+================================================== */
+
+.project-card {
+  display: block;
+
+  width: calc(100% - 72px);
+  max-width: 440px;
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: var(--panel);
+  color: inherit;
+
+  font: inherit;
+  text-align: left;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+.project-card:hover {
+  transform: translateY(-3px);
+  background: #3a1a66;
+}
+
+
+.project-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+
+/* ==================================================
+   Cover
+================================================== */
+
+.project-cover {
+  width: 100%;
+  aspect-ratio: 2.4 / 1;
+  overflow: hidden;
+}
+
+
+.project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  transition: transform 0.35s ease;
+}
+
+
+.project-card:hover .project-cover img {
+  transform: scale(1.02);
+}
+
+
+/* ==================================================
+   Project Info
+================================================== */
+
+.project-info {
+  padding: 12px 15px 14px;
+}
+
+
+.project-title {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+
+.project-role {
+  margin-top: 3px;
+
+  color: #bcb8ca;
+
+  font-family: var(--sans);
+  font-size: 11px;
+}
+
+
+/* ==================================================
+   Expand Hint
+================================================== */
+
+.project-expand-hint {
+  margin-top: 10px;
+
+  color: #8f8ba0;
+
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+
+  opacity: 0;
+
+  transform: translateY(3px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.project-card:hover .project-expand-hint,
+.project-card[aria-expanded="true"] .project-expand-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ==================================================
+   Platforms
+================================================== */
+
+.platforms {
+  margin-top: 9px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+.platform {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #ddd9e4;
+
+  font-family: var(--sans);
+  font-size: 11px;
+}
+
+
+.platform img {
+  width: auto;
+  height: 18px;
+  object-fit: contain;
+}
+
+
+.platform-taptap img {
+  height: 14px;
+}
+
+
+/* ==================================================
+   Project Detail
+================================================== */
+
+.project-detail {
+  max-height: 0;
+
+  margin-top: 0;
+
+  opacity: 0;
+
+  overflow: hidden;
+  visibility: hidden;
+
+  transition:
+    max-height 0.4s ease,
+    opacity 0.25s ease,
+    margin-top 0.4s ease,
+    visibility 0s linear 0.4s;
+}
+
+
+.project-detail.is-open {
+  max-height: 1200px;
+
+  margin-top: 18px;
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    max-height 0.4s ease,
+    opacity 0.25s ease,
+    margin-top 0.4s ease,
+    visibility 0s linear 0s;
+}
+
+
+/* =========================
+   代表作 Detail
+========================= */
+
+.featured-project .project-detail {
+  width: calc(100% - 28px);
+}
+
+
+/* 左侧代表作 */
+
+.featured-team .project-detail {
+  margin-left: 28px;
+  margin-right: 0;
+}
+
+
+/* 右侧代表作 */
+
+.featured-personal .project-detail {
+  margin-left: 0;
+  margin-right: 28px;
+}
+
+
+/* =========================
+   普通作品 Detail
+========================= */
+
+.project .project-detail {
+  width: calc(100% - 72px);
+  max-width: 440px;
+}
+
+
+/* 左侧普通作品 */
+
+.timeline-team .project .project-detail {
+  margin-left: 28px;
+  margin-right: auto;
+}
+
+
+/* 右侧普通作品 */
+
+.timeline-personal .project .project-detail {
+  margin-left: auto;
+  margin-right: 28px;
+}
+
+
+/* =========================
+   Detail Content
+========================= */
+
+.detail-section {
+  padding: 0 4px 20px;
+}
+
+
+.detail-section h3 {
+  margin: 0 0 7px;
+
+  color: var(--text);
+
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+
+.detail-section p {
+  margin: 0;
+
+  color: #c9c5d3;
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   Detail Media
+========================= */
+
+.detail-media {
+  width: fit-content;
+  max-width: 100%;
+
+  margin: 0 auto 22px;
+}
+
+
+.detail-media img {
+  display: block;
+
+  width: auto;
+  max-width: 100%;
+  max-height: var(--detail-media-max-height);
+
+  height: auto;
+
+  margin: 0 auto;
+
+  background: var(--panel);
+}
+
+.detail-media figcaption {
+  margin-top: 7px;
+
+  color: var(--muted);
+
+  font-family: var(--sans);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   Detail Links
+========================= */
+
+.detail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  padding: 2px 4px 22px;
+}
+
+
+.detail-links a {
+  display: inline-block;
+
+  padding: 6px 11px;
+
+  border: 1px solid rgba(244, 242, 238, 0.35);
+
+  color: var(--text);
+
+  font-family: var(--sans);
+  font-size: 10px;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.detail-links a:hover {
+  background: var(--panel);
+  border-color: var(--accent);
+}
+
+
+/* ==================================================
+   Other Works
+================================================== */
+
+.other-works {
+  padding-top: 0;
+}
+
+
+.column-labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.column-labels > div {
+  padding: 12px 0 13px;
+
+  text-align: center;
+
+  font-size: 22px;
+
+  /* border-bottom: 1px solid var(--line); */
+}
+
+
+/* ==================================================
+   Timelines
+================================================== */
+
+.timelines {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  column-gap: 80px;
+}
+
+
+.timeline {
+  position: relative;
+
+  min-height: 600px;
+
+  padding: 36px 0 40px;
+}
+
+
+/* 左边轴 */
+
+.timeline-team {
+  border-left: 1px solid var(--line);
+}
+
+
+/* 右边轴 */
+
+.timeline-personal {
+  border-right: 1px solid var(--line);
+}
+
+
+/* ==================================================
+   Project
+================================================== */
+
+.project {
+  position: relative;
+
+  width: 100%;
+
+  padding-bottom: 42px;
+}
+
+
+/* 时间节点 */
+
+.project::before {
+  content: "";
+
+  position: absolute;
+
+  top: 20px;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  z-index: 3;
+}
+
+
+.timeline-team .project::before {
+  left: -5px;
+}
+
+
+.timeline-personal .project::before {
+  right: -5px;
+}
+
+
+/* ==================================================
+   Date
+================================================== */
+
+.project-date {
+  position: absolute;
+
+  top: 0;
+
+  font-size: 15px;
+  line-height: 1.4;
+
+  white-space: nowrap;
+}
+
+
+.timeline-team .project-date {
+  left: -64px;
+}
+
+
+.timeline-personal .project-date {
+  right: -64px;
+}
+
+
+/* ==================================================
+   Timeline Card Position
+================================================== */
+
+.timeline-team .project-card {
+  margin-left: 28px;
+  margin-right: auto;
+}
+
+
+.timeline-personal .project-card {
+  margin-left: auto;
+  margin-right: 28px;
+}
+
+
+/* ==================================================
+   Footer
+================================================== */
+
+footer {
+  margin-top: 34px;
+}
+
+
+.footer-line {
+  height: 1px;
+  background: var(--line);
+}
+
+
+.footer-inner {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-top: 18px;
+
+  color: var(--muted);
+
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+
+/* ==================================================
+   Mobile
+================================================== */
+
+@media (max-width: 760px) {
+
+  .site-shell {
+    width: calc(100% - 32px);
+    padding-top: 30px;
+  }
+
+
+  .profile {
+    gap: 18px;
+  }
+
+
+  .avatar {
+    width: 96px;
+  }
+
+
+  .profile h1 {
+    font-size: 31px;
+  }
+
+
+  .positioning {
+    font-size: 16px;
+  }
+
+
+  .experience {
+    font-size: 10px;
+  }
+
+
+  .bio {
+    font-size: 14px;
+  }
+
+
+  /* =========================
+     代表作
+  ========================= */
+
+  .featured-grid {
+    display: block;
+
+    margin-top: 28px;
+  }
+
+
+  .featured-project {
+    margin-bottom: 40px;
+  }
+
+
+  .featured-project:last-child {
+    margin-bottom: 0;
+  }
+
+
+  .featured-team .project-card,
+  .featured-personal .project-card {
+    width: 100%;
+
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+  .featured-team .featured-axis,
+  .featured-personal .featured-axis {
+    display: none;
+  }
+
+
+  /* =========================
+     其他作品
+  ========================= */
+
+  .column-labels {
+    display: none;
+  }
+
+
+  .timelines {
+    display: block;
+  }
+
+
+  .timeline-team,
+  .timeline-personal {
+    border-left: 1px solid var(--line);
+    border-right: 0;
+  }
+
+
+  .timeline {
+    min-height: auto;
+  }
+
+
+  .project {
+    padding-left: 28px;
+  }
+
+
+  .project::before {
+    left: -5px !important;
+    right: auto !important;
+  }
+
+
+  .project-date {
+    position: static;
+
+    margin-bottom: 8px;
+  }
+
+
+  .project-card {
+    width: 100%;
+
+    max-width: none;
+
+    margin: 0 !important;
+  }
+
+
+  /* =========================
+     Footer
+  ========================= */
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+
+.profile {
+  display:flex;
+  align-items:center;
+  gap:40px;
+}
+
+.profile-copy {
+  flex:1;
+}
+
+.cosmic-earth {
+
+  position:relative;
+
+  width:280px;
+  height:220px;
+
+  flex-shrink:0;
+
+  overflow:visible;
+
+}
+
+.earth {
+
+  position:absolute;
+
+  width:170px;
+  height:170px;
+
+  right:35px;
+  top:25px;
+
+  border-radius:50%;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #55c8ff,
+      #087bb8 70%
+    );
+
+  animation:
+    earthFloat 8s ease-in-out infinite;
+
+}
+
+.continent {
+
+  width:260px;
+  height:170px;
+
+  position:absolute;
+
+  left:-40px;
+  top:20px;
+
+
+  background:
+  url("assets/continent.svg")
+  center / contain no-repeat;
+
+
+  animation:
+    earthRotate 30s linear infinite;
+
+}
+
+.moon {
+
+    position:absolute;
+
+    width:65px;
+    height:65px;
+
+    right:-32px;
+    top:50%;
+
+    transform:
+    translateY(-50%);
+
+
+}
+
+.orbit {
+
+    position:absolute;
+
+    width:240px;
+    height:120px;
+
+    right:0;
+    top:50px;
+
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:50%;
+
+
+    transform:
+    rotate(-35deg);
+
+}
+
+@keyframes earthFloat {
+
+0%,100%{
+
+transform:
+translateY(0);
+
+}
+
+
+50%{
+
+transform:
+translateY(-6px);
+
+}
+
+}
+
+@keyframes earthRotate {
+
+
+from{
+
+transform:
+translateX(0);
+
+}
+
+
+to{
+
+transform:
+translateX(-80px);
+
+}
+
+}
+
+@keyframes moonMove {
+
+
+0%,100%{
+
+transform:
+
+translate(
+0,
+0
+);
+
+}
+
+
+50%{
+
+transform:
+
+translate(
+80px,
+-45px
+);
+
+}
+
+}
+
+.earth{
+ z-index:2;
+}
+
+
+.moon{
+ z-index:3;
+}
+
+
+.orbit{
+ z-index:1;
+}
+
+.orbit {
+
+    animation:
+    moonOrbit 10s ease-in-out infinite alternate;
+
+}
+
+
+@keyframes moonOrbit {
+
+
+from{
+
+    transform:
+    rotate(-35deg)
+    rotate(-20deg);
+
+}
+
+
+to{
+
+    transform:
+    rotate(-35deg)
+    rotate(40deg);
+
+}
+
+
+}
+
+.earth {
+    z-index:1;
+}
+
+
+.orbit {
+    z-index:2;
+}
+
+
+.moon {
+    z-index:3;
+}
+
+.earth {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.earth-map {
+    width: 100%;
+    height: 100%;
+
+    background-image: url("assets/earth.png");
+    image-rendering: pixelated;
+    background-repeat: repeat-x;
+
+    /* 让 192×64 等比例缩放到高度 160 */
+    background-size: auto 100%;
+
+    animation: earthRotate 20s linear infinite;
+}
+
+@keyframes earthRotate {
+    from {
+        background-position-x: 0;
+    }
+
+    to {
+        background-position-x: -480px;
+    }
+}
