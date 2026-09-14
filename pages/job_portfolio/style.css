@@ -40,6 +40,21 @@ body {
   font-family: var(--serif);
 }
 
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at 75% 10%,
+      rgba(72, 52, 130, 0.28),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #0d1036 0%,
+      #12113b 50%,
+      #1b123f 100%
+    );
+}
 
 a {
   color: inherit;
