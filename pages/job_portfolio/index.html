@@ -8,16 +8,54 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>洪鑫裕 — Portfolio</title>
+  <title>洪鑫裕 — 关卡策划 Portfolio</title>
+
+  <meta
+    name="description"
+    content="洪鑫裕，28届硕士毕业生，求职关卡策划。2段 Unity 实习，专注叙事与体验导向的关卡设计。代表作《神明也没猜到结局》《孤岛》《七昼梦》。"
+  >
+  <meta
+    name="theme-color"
+    content="#0a1628"
+  >
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="洪鑫裕 — 关卡策划 Portfolio">
+  <meta
+    property="og:description"
+    content="叙事和体验导向的游戏设计者 · 2 段 Unity 实习 · VR / AR 项目经验"
+  >
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a1628'/%3E%3Ccircle cx='16' cy='16' r='10' fill='%231c3a5e'/%3E%3Cg fill='%23dcb86e'%3E%3Crect x='9' y='12' width='5' height='4'/%3E%3Crect x='11' y='9' width='4' height='3'/%3E%3Crect x='16' y='10' width='6' height='3'/%3E%3Crect x='19' y='13' width='3' height='5'/%3E%3Crect x='12' y='18' width='4' height='3'/%3E%3Crect x='22' y='18' width='3' height='3'/%3E%3C/g%3E%3C/svg%3E"
+  >
 
   <link
     rel="stylesheet"
-    href="style.css"
+    href="style.css?v=15"
   >
 </head>
 
 
 <body>
+
+  <nav class="site-nav" aria-label="主导航">
+    <div class="site-nav-inner">
+
+      <a href="#profile" class="nav-brand">
+        PORTFOLIO
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#featured">代表作</a></li>
+        <li><a href="#projects">其他作品</a></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
   <main class="site-shell">
 
 
@@ -26,10 +64,13 @@
     ========================== -->
 
     <header class="profile" id="profile">
+
       <div class="avatar">
         <img
-          src="assets/avatar.jpg"
+          src="assets/avatar.jpg?v=2"
           alt="洪鑫裕"
+          width="640"
+          height="640"
         >
       </div>
 
@@ -51,23 +92,55 @@
           叙事和体验导向的游戏设计者，致力于带给玩家充满沉浸感和特殊感的游戏体验。
         </p>
 
+        <blockquote class="philosophy">
+          关卡与场景的编排，既是隐性叙事的核心力量，又是玩家体验的操盘手。
+        </blockquote>
+
+        <ul
+          class="skill-stack"
+          aria-label="技能栈"
+        >
+          <li>Unity</li>
+          <li>关卡白盒</li>
+          <li>叙事设计</li>
+          <li>Git</li>
+          <li>C#</li>
+        </ul>
+
+        <div class="hero-actions">
+          <a
+            class="btn btn-primary"
+            href="#featured"
+          >查看作品</a>
+          <a
+            class="btn btn-ghost"
+            href="mailto:lanmayofficial@163.com"
+          >邮件联系</a>
+          <a
+            class="btn btn-ghost"
+            href="assets/resume.pdf"
+            target="_blank"
+            rel="noopener"
+          >下载简历 PDF</a>
+        </div>
+
       </div>
 
-      <div class="cosmic-earth">
+      <div
+        class="cosmic-earth"
+        aria-hidden="true"
+      >
 
-          <div class="orbit">
+        <div class="orbit">
+          <div class="moon"></div>
+        </div>
 
-              <div class="moon">
-              </div>
-
-          </div>
-
-          <div class="earth">
-            <div class="earth-map"></div>
-          </div>
+        <div class="earth">
+          <div class="earth-map"></div>
+        </div>
 
       </div>
-      
+
     </header>
 
 
@@ -75,10 +148,20 @@
          Representative Works
     ========================== -->
 
-    <section class="featured" id="featured">
+    <section
+      class="featured"
+      id="featured"
+      aria-labelledby="featured-heading"
+    >
 
       <div class="section-heading">
-        代表作
+        <span
+          class="section-kicker"
+          aria-hidden="true"
+        >FEATURED WORKS</span>
+        <h2 id="featured-heading">
+          代表作
+        </h2>
       </div>
 
 
@@ -87,12 +170,10 @@
 
         <!-- 神明 -->
 
-        <article class="featured-project featured-team">
-
-          <div class="featured-axis"></div>
+        <article class="featured-project">
 
           <div
-            class="project-card"
+              class="project-card"
             role="button"
             tabindex="0"
             aria-expanded="false"
@@ -101,18 +182,24 @@
             <div class="project-cover">
               <img
                 src="assets/shenming.jpg"
-                alt="《神明也没猜到结局》"
+                alt="《神明也没猜到结局》宣传图"
+                width="920"
+                height="430"
               >
             </div>
 
             <div class="project-info">
 
-              <h2 class="project-title">
+              <h3 class="project-title">
                 《神明也没猜到结局》
-              </h2>
+              </h3>
 
               <div class="project-role">
                 UI体验设计 / 客户端
+              </div>
+
+              <div class="project-meta">
+                <time class="project-period">2025.02 — 2025.06</time>
               </div>
 
               <div class="platforms">
@@ -120,7 +207,7 @@
                 <span class="platform">
                   <img
                     src="assets/icons/steam.svg"
-                    alt="Steam"
+                    alt=""
                   >
                   <span>特别好评</span>
                 </span>
@@ -128,7 +215,7 @@
                 <span class="platform">
                   <img
                     src="assets/icons/taptap.svg"
-                    alt="TapTap"
+                    alt=""
                   >
                   <span>9.5/10.0</span>
                 </span>
@@ -146,56 +233,40 @@
 
           <!-- 神明详情 -->
 
-          <div class="project-detail" aria-hidden="true">
+          <div class="project-detail">
+           <div class="detail-inner">
 
              <div class="detail-section">
-                <h3>项目简介</h3>
+                <h4>项目简介</h4>
                 <p>2D点击解谜游戏，以单人海龟汤为核心玩法。玩家聆听一篇故事的开头和结尾后，针对若干关键词对主持人提问，最终补全故事中间的细节，推理出事件真相。游戏支持UGC，并在Steam平台维护了一定体量的玩家社区。</p>
               </div>
 
               <div class="detail-section">
-                <h3>我的职责</h3>
+                <h4>我的职责</h4>
                 <p>参与交互体验落地。设计、实现并迭代按钮的交互反馈、点击与氛围粒子特效，以及弹窗的缓动动画等，辅助塑造静态界面的质感与叙事氛围。</p>
                 <p>参与本地化、UI的功能实现，以及Spine动画的导入和整合。</p>
               </div>
 
               <div class="detail-section">
-                <h3>项目成果</h3>
+                <h4>项目成果</h4>
                 <p>Steam特别好评</p>
                 <p>TapTap 评分 9.5/10.0 ，热度10万（截至2026.9.14）</p>
               </div>
 
-            <!--
-            图片示例：
+              <div class="detail-links">
+                <a
+                  href="https://store.steampowered.com/app/4017820/"
+                  target="_blank"
+                  rel="noopener"
+                >Steam 商店页 ↗</a>
+                <a
+                  href="https://www.taptap.cn/app/742580"
+                  target="_blank"
+                  rel="noopener"
+                >TapTap 页面 ↗</a>
+              </div>
 
-            <figure class="detail-media">
-              <img
-                src="assets/你的图片.jpg"
-                alt="图片说明"
-              >
-              <figcaption>
-                图片说明
-              </figcaption>
-            </figure>
-
-            GIF 直接使用 img 即可：
-
-            <figure class="detail-media">
-              <img
-                src="assets/你的动图.gif"
-                alt="动图说明"
-              >
-            </figure>
-            -->
-
-            <div class="detail-links">
-              <!--
-              <a href="你的链接" target="_blank" rel="noopener">
-                查看项目
-              </a>
-              -->
             </div>
-
           </div>
 
         </article>
@@ -203,9 +274,7 @@
 
         <!-- 孤岛 -->
 
-        <article class="featured-project featured-personal">
-
-          <div class="featured-axis"></div>
+        <article class="featured-project">
 
           <div
             class="project-card"
@@ -217,18 +286,24 @@
             <div class="project-cover">
               <img
                 src="assets/gudao.jpg"
-                alt="《孤岛》"
+                alt="《孤岛》宣传图"
+                width="1820"
+                height="1024"
               >
             </div>
 
             <div class="project-info">
 
-              <h2 class="project-title">
+              <h3 class="project-title">
                 《孤岛》
-              </h2>
+              </h3>
 
               <div class="project-role">
                 制作人 / 关卡设计 / 视觉设计
+              </div>
+
+              <div class="project-meta">
+                <time class="project-period">2024.09 — 至今</time>
               </div>
 
               <div class="platforms">
@@ -236,7 +311,7 @@
                 <span class="platform">
                   <img
                     src="assets/icons/steam.svg"
-                    alt="Steam"
+                    alt=""
                   >
                   <span>即将推出</span>
                 </span>
@@ -254,24 +329,25 @@
 
           <!-- 孤岛详情 -->
 
-          <div class="project-detail" aria-hidden="true">
+          <div class="project-detail">
+           <div class="detail-inner">
 
             <div class="detail-section">
-              <h3>项目简介</h3>
+              <h4>项目简介</h4>
               <p>
                 2D卷轴横版探索解谜游戏，以梦核和心理恐怖为视觉设计锚点。玩家在名为梦世界的非现实世界探索，通过收集记忆碎片，逐渐拼凑出主角何芰的身世。探讨有关个人成长、价值、生与死的传统母题。
               </p>
             </div>
 
             <div class="detail-section">
-              <h3>我的职责</h3>
+              <h4>我的职责</h4>
               <p>
                 制作人 / 关卡设计 / 视觉设计
               </p>
             </div>
 
             <div class="detail-section">
-              <h3>设计内容</h3>
+              <h4>设计内容</h4>
               <p>
                 在系统和玩法设计之后，基于玩法和叙事需要，制作了多种游戏内和游戏外的关卡。具体案例请见PDF作品集，此处仅展示部分截图。
               </p>
@@ -280,41 +356,43 @@
             <figure class="detail-media">
               <img
                 src="assets/tutorialDemo.jpg"
-                alt="图片说明"
+                alt="《孤岛》元谜题新手教程的关卡设计案"
+                width="1131"
+                height="1600"
+                loading="lazy"
+                decoding="async"
               >
               <figcaption>
                 关于“元谜题”新手教程的关卡设计案（其一）
               </figcaption>
             </figure>
-            
 
             <div class="detail-section">
-              <h3>项目成果</h3>
+              <h4>项目成果</h4>
               <p>
                 福州大学毕业设计（论文）：86/100
               </p>
             </div>
 
             <div class="detail-links">
-              <!--
-              <a href="你的链接" target="_blank" rel="noopener">
-                查看项目
-              </a>
-              -->
+              <a
+                href="https://store.steampowered.com/app/5034880/_/"
+                target="_blank"
+                rel="noopener"
+              >Steam 商店页 ↗</a>
             </div>
 
+           </div>
           </div>
 
         </article>
 
         <!-- 七昼梦 -->
 
-          <article class="featured-project featured-team">
+        <article class="featured-project">
 
-            <div class="featured-axis"></div>
-
-            <div
-              class="project-card"
+          <div
+            class="project-card"
               role="button"
               tabindex="0"
               aria-expanded="false"
@@ -323,18 +401,24 @@
               <div class="project-cover">
                 <img
                   src="assets/project-nanachume.jpg"
-                  alt="《七昼梦》"
+                  alt="《七昼梦》宣传图"
+                  width="1920"
+                  height="1080"
                 >
               </div>
 
               <div class="project-info">
 
-                <h2 class="project-title">
+                <h3 class="project-title">
                   《七昼梦》
-                </h2>
+                </h3>
 
                 <div class="project-role">
                   制作人 / 关卡设计 / 场景设计
+                </div>
+
+                <div class="project-meta">
+                  <time class="project-period">2024.12</time>
                 </div>
 
                 <div class="platforms">
@@ -342,7 +426,7 @@
                   <span class="platform">
                     <img
                       src="assets/icons/gbit.svg"
-                      alt="GameJam"
+                      alt=""
                     >
                     <span>高校GameJam挑战赛银奖、最佳主题诠释奖</span>
                   </span>
@@ -357,26 +441,28 @@
 
             </div>
 
-            <div class="project-detail" aria-hidden="true">
+            <div class="project-detail">
+             <div class="detail-inner">
 
               <div class="detail-section">
-                <h3>项目简介</h3>
+                <h4>项目简介</h4>
                 <p>2D横版解谜游戏，试验了叙诡（Unreliable Narrator）的叙事方式，讲述了一个陷入昏迷与自我拯救的故事。玩家在现实世界与梦境世界之间探索，通过将现实物体带入梦境的方式推动剧情。</p>
               </div>
 
               <div class="detail-section">
-                <h3>我的职责</h3>
+                <h4>我的职责</h4>
                 <p>负责解谜游戏的核心玩法框架设计。建立“日有所思，夜有所梦”，即现实记忆影响梦境的核心循环机制，设计关卡并落地。</p>
                 <p>通过兴趣点设计，规划珍珠项链式的动线和节奏。用多项支线点击解谜关卡，丰富玩家体验的维度，将叙事、关卡与体验流深耦合。</p>
                 <p>依据亮度/饱和度对比、后处理、粒子特效、镜头语言等设计，建立场景在视觉层面的空间线索体系，引导玩家有效推进关卡。</p>
               </div>
 
               <div class="detail-section">
-                <h3>项目成果</h3>
+                <h4>项目成果</h4>
                 <p>荣获高校GameJam挑战赛银奖、最佳主题诠释奖</p>
                 <p>协助福州大学学生VR畅游协会获得最佳创新社团奖</p>
               </div>
 
+             </div>
             </div>
 
           </article>
@@ -390,12 +476,20 @@
          Other Works
     ========================== -->
 
-    <!-- <hr> -->
-
-    <section class="other-works" id="projects">
+    <section
+      class="other-works"
+      id="projects"
+      aria-labelledby="projects-heading"
+    >
 
       <div class="section-heading">
-        其他作品
+        <span
+          class="section-kicker"
+          aria-hidden="true"
+        >OTHER WORKS</span>
+        <h2 id="projects-heading">
+          其他作品
+        </h2>
       </div>
 
 
@@ -440,15 +534,19 @@
               <div class="project-cover">
                 <img
                   src="assets/xisi.jpg"
-                  alt="《下一秒细思恐极》"
+                  alt="《下一秒细思恐极》宣传图"
+                  width="2102"
+                  height="1183"
+                  loading="lazy"
+                  decoding="async"
                 >
               </div>
 
               <div class="project-info">
 
-                <h2 class="project-title">
+                <h3 class="project-title">
                   《下一秒细思恐极》
-                </h2>
+                </h3>
 
                 <div class="project-role">
                   TapTap小游戏端迁移 / 客户端
@@ -459,7 +557,7 @@
                   <span class="platform">
                     <img
                       src="assets/icons/taptap.svg"
-                      alt="TapTap"
+                      alt=""
                     >
                     <span>6.7/10.0</span>
                   </span>
@@ -474,25 +572,35 @@
 
             </div>
 
-            <div class="project-detail" aria-hidden="true">
+            <div class="project-detail">
+             <div class="detail-inner">
 
               <div class="detail-section">
-                <h3>项目简介</h3>
+                <h4>项目简介</h4>
                 <p>休闲点击解谜游戏。玩家通过点击、拖动和使用画面道具，与场景进行交互，从而还原事件真相。该游戏于2020年上架TapTap，并在2025年5月前后完成TapTap小游戏端的迁移，包体已通过官方性能测试。</p>
               </div>
 
               <div class="detail-section">
-                <h3>我的职责</h3>
+                <h4>我的职责</h4>
                 <p>负责修改游戏架构，使其通过Addressables寻址的方式远程加载资源包。</p>
                 <p>针对小游戏端的广告服务，设计和实现了广告UI弹窗。</p>
                 <p>针对TapTap端的系统和性能要求，进行游戏内优化和迭代，最终通过测试。</p>
               </div>
 
               <div class="detail-section">
-                <h3>项目成果</h3>
+                <h4>项目成果</h4>
                 <p>TapTap 评分 6.7 / 10.0</p>
               </div>
 
+              <div class="detail-links">
+                <a
+                  href="https://www.taptap.cn/app/191003"
+                  target="_blank"
+                  rel="noopener"
+                >TapTap 页面 ↗</a>
+              </div>
+
+             </div>
             </div>
 
           </article>
@@ -516,15 +624,19 @@
               <div class="project-cover">
                 <img
                   src="assets/project-yile.jpg"
-                  alt="《以乐》"
+                  alt="《以乐》宣传图"
+                  width="1980"
+                  height="1080"
+                  loading="lazy"
+                  decoding="async"
                 >
               </div>
 
               <div class="project-info">
 
-                <h2 class="project-title">
+                <h3 class="project-title">
                   《以乐》
-                </h2>
+                </h3>
 
                 <div class="project-role">
                   客户端 / 音乐策划
@@ -535,7 +647,7 @@
                   <span class="platform">
                     <img
                       src="assets/icons/fzu.svg"
-                      alt="福州大学"
+                      alt=""
                     >
                     <span>西二在线工作室孵化项目</span>
                   </span>
@@ -550,24 +662,26 @@
 
             </div>
 
-            <div class="project-detail" aria-hidden="true">
+            <div class="project-detail">
+             <div class="detail-inner">
 
               <div class="detail-section">
-                <h3>项目简介</h3>
+                <h4>项目简介</h4>
                 <p>2D横版像素肉鸽游戏。玩家需要操作摇摇晃晃的“汽水人”打败敌人，穿越一层层房间，最终直面统治地底的BOSS，实现自己的“勇者斗恶龙”的故事。</p>
               </div>
 
               <div class="detail-section">
-                <h3>我的职责</h3>
+                <h4>我的职责</h4>
                 <p>负责游戏音乐、音效的制作、整合，并在Unity中实现动态音频效果（例：分轨播放，当玩家与关键物体距离缩短时，放大部分音轨的声音），提升了游戏的沉浸感。</p>
                 <p>同时负责一部分敌人的QA测试，并协调程序进行调整。</p>
               </div>
 
               <div class="detail-section">
-                <h3>项目成果</h3>
+                <h4>项目成果</h4>
                 <p>通过西二在线工作室暑期轮考核，入选西二在线工作室2023-2024学年组员。</p>
               </div>
 
+             </div>
             </div>
 
           </article>
@@ -601,15 +715,19 @@
               <div class="project-cover">
                 <img
                   src="assets/project-pico.jpg"
-                  alt="《Poppin' 面包》"
+                  alt="《Poppin' 面包》宣传图"
+                  width="1920"
+                  height="1080"
+                  loading="lazy"
+                  decoding="async"
                 >
               </div>
 
               <div class="project-info">
 
-                <h2 class="project-title">
+                <h3 class="project-title">
                   《Poppin' 面包》
-                </h2>
+                </h3>
 
                 <div class="project-role">
                   制作人 / 原型开发
@@ -620,7 +738,7 @@
                   <span class="platform">
                     <img
                       src="assets/icons/bilibili.svg"
-                      alt="Bilibili"
+                      alt=""
                     >
                     <span>下载量 300+</span>
                   </span>
@@ -635,32 +753,38 @@
 
             </div>
 
-            <div class="project-detail" aria-hidden="true">
+            <div class="project-detail">
+             <div class="detail-inner">
 
               <div class="detail-section">
-                <h3>项目简介</h3>
+                <h4>项目简介</h4>
                 <p>基于传统游戏“叠叠乐”的 BanG Dream! 同人作品。成功迁移和落地了在实习期间学习的OOP框架，特别是弹窗类抽象/继承的策略。</p>
               </div>
 
               <div class="detail-section">
-                <h3>我的职责</h3>
+                <h4>我的职责</h4>
                 <p>全面负责了从原型、玩法、系统设计到美术、程序实现，再到导出和宣发的过程。</p>
               </div>
 
               <div class="detail-section">
-                <h3>项目成果</h3>
+                <h4>项目成果</h4>
                 <p>网盘下载量 300+</p>
                 <p>演示视频播放量 3000+</p>
                 <p>演示视频点赞/播放比 12%</p>
-                </p>
               </div>
 
+              <div class="detail-links">
+                <a
+                  href="https://www.bilibili.com/video/BV1VHZRY8EfB"
+                  target="_blank"
+                  rel="noopener"
+                >B 站演示视频 ↗</a>
+              </div>
+
+             </div>
             </div>
 
           </article>
-
-
-          
 
 
           <!-- SupermarkeT -->
@@ -681,15 +805,19 @@
               <div class="project-cover">
                 <img
                   src="assets/project-supermarket.jpg"
-                  alt="《SupermarkeT》"
+                  alt="《SupermarkeT》游戏画面"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                  decoding="async"
                 >
               </div>
 
               <div class="project-info">
 
-                <h2 class="project-title">
+                <h3 class="project-title">
                   《SupermarkeT》
-                </h2>
+                </h3>
 
                 <div class="project-role">
                   客户端 / 系统策划
@@ -700,7 +828,7 @@
                   <span class="platform">
                     <img
                       src="assets/icons/fzu.svg"
-                      alt="福州大学"
+                      alt=""
                     >
                     <span>结课作业（87/100）</span>
                   </span>
@@ -715,24 +843,26 @@
 
             </div>
 
-            <div class="project-detail" aria-hidden="true">
+            <div class="project-detail">
+             <div class="detail-inner">
 
               <div class="detail-section">
-                <h3>项目简介</h3>
+                <h4>项目简介</h4>
                 <p>课堂作业。基于Google Cardboard开发的简易VR项目，以模拟经营作为核心玩法。玩家扮演小卖部的店长，每天关店后进行采购和布景。</p>
               </div>
 
               <div class="detail-section">
-                <h3>我的职责</h3>
+                <h4>我的职责</h4>
                 <p>作为策划，设计了游戏的主要循环、玩法和程序功能架构，领导完成流程图制作和策划案的编写。</p>
                 <p>作为客户端，通过Blender进行建模（顾客），并撰写Shader和C#脚本使其成功落地。</p>
               </div>
 
               <div class="detail-section">
-                <h3>项目成果</h3>
+                <h4>项目成果</h4>
                 <p>结课作业评分 87 / 100</p>
               </div>
 
+             </div>
             </div>
 
           </article>
@@ -756,15 +886,19 @@
               <div class="project-cover">
                 <img
                   src="assets/project-gugu.jpg"
-                  alt="《咕咕大作战》"
+                  alt="《咕咕大作战》宣传图"
+                  width="1920"
+                  height="1080"
+                  loading="lazy"
+                  decoding="async"
                 >
               </div>
 
               <div class="project-info">
 
-                <h2 class="project-title">
+                <h3 class="project-title">
                   《咕咕大作战》
-                </h2>
+                </h3>
 
                 <div class="project-role">
                   客户端 / 音乐策划
@@ -775,7 +909,7 @@
                   <span class="platform">
                     <img
                       src="assets/icons/fzu.svg"
-                      alt="福州大学"
+                      alt=""
                     >
                     <span>2024 Global Game Jam</span>
                   </span>
@@ -790,26 +924,28 @@
 
             </div>
 
-            <div class="project-detail" aria-hidden="true">
+            <div class="project-detail">
+             <div class="detail-inner">
 
               <div class="detail-section">
-                <h3>项目简介</h3>
+                <h4>项目简介</h4>
                 <p>2D俯视角派对游戏。玩家需要操作两只相互吸引的小鸡，在各自的农场里拾取道具、阻碍对方，活到最后的玩家获得胜利。当农场主出现并进行无差别攻击时，玩家被迫从敌人转向暂时合作的队友，带来更为不可预期的游戏节奏。</p>
               </div>
 
               <div class="detail-section">
-                <h3>我的职责</h3>
+                <h4>我的职责</h4>
                 <p>使用FL Studio完成两首BGM以及若干音效的制作。</p>
                 <p>编写敌人NPC的状态机，与负责精灵图绘制的美术对接，最终整合为若干敌人预制体。</p>
               </div>
 
               <div class="detail-section">
-                <h3>项目成果</h3>
+                <h4>项目成果</h4>
                 <p>2024 Global Game Jam 完赛作品</p>
                 <p>于2024年福州大学社团巡礼节、第三届侯官论坛展出试玩</p>
                 <p>2025年福建省大学生工程实践与创新能力大赛初赛出线作品</p>
               </div>
 
+             </div>
             </div>
 
           </article>
@@ -833,15 +969,19 @@
               <div class="project-cover">
                 <img
                   src="assets/project-dice.jpg"
-                  alt="《译梦人》"
+                  alt="《译梦人》宣传图"
+                  width="2048"
+                  height="1152"
+                  loading="lazy"
+                  decoding="async"
                 >
               </div>
 
               <div class="project-info">
 
-                <h2 class="project-title">
+                <h3 class="project-title">
                   《译梦人》
-                </h2>
+                </h3>
 
                 <div class="project-role">
                   客户端 / 音乐策划
@@ -852,7 +992,7 @@
                   <span class="platform">
                     <img
                       src="assets/icons/fzu.svg"
-                      alt="福州大学"
+                      alt=""
                     >
                     <span>2023 BOOOM 游戏创作挑战</span>
                   </span>
@@ -867,19 +1007,21 @@
 
             </div>
 
-            <div class="project-detail" aria-hidden="true">
+            <div class="project-detail">
+             <div class="detail-inner">
 
               <div class="detail-section">
-                <h3>项目简介</h3>
+                <h4>项目简介</h4>
                 <p>2D俯视角回合制战斗+卡牌RPG，玩家可以通过编排卡牌顺序实现各种奇特的“化学反应”。</p>
               </div>
 
               <div class="detail-section">
-                <h3>我的职责</h3>
+                <h4>我的职责</h4>
                 <p>负责卡牌战斗的UI设计和C#系统功能实现。</p>
                 <p>使用FL Studio完成若干BGM及音效的制作。</p>
               </div>
 
+             </div>
             </div>
 
           </article>
@@ -902,14 +1044,22 @@
 
     <div class="footer-inner">
 
-      <span>
+      <span class="footer-label">
         CONTACT
       </span>
 
       <span class="contact-links">
         <a href="mailto:lanmayofficial@163.com">邮箱</a>
-        /
-        <a href="https://github.com/lanfeng455" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span class="contact-sep" aria-hidden="true">/</span>
+        <a
+          href="https://github.com/lanfeng455"
+          target="_blank"
+          rel="noopener noreferrer"
+        >GitHub</a>
+        <!-- 简历就绪后补充：
+        <span class="contact-sep" aria-hidden="true">/</span>
+        <a href="assets/resume.pdf" target="_blank" rel="noopener">简历 PDF</a>
+        -->
       </span>
 
     </div>
@@ -919,7 +1069,7 @@
   </main>
 
 
-  <script src="script.js"></script>
+  <script src="script.js?v=9"></script>
 
 </body>
 
