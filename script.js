@@ -6,10 +6,10 @@ const projectsData = [
         category: "全栈 | Unity 游戏开发",
         year: "2026 本科毕业设计",
         description: "2D 横版叙事解谜游戏，讨论生死、虚无主义和个人成长的议题。",
-        longDescription: "在游玩《三伏》《黑森町绮谭》及世纪初的免费恐怖JRPG之后，耳濡目染的作品。玩家在名为<color=#9876C5>梦世界</color>的非现实世界探索，通过收集记忆碎片，逐渐拼凑出主角<color=#FFDC88>何芰</color>的身世，探讨个人成长、价值、生与死的传统母题。",
+        longDescription: "2D卷轴横版探索解谜游戏，以梦核和心理恐怖为视觉设计锚点。玩家在名为梦世界的非现实世界探索，通过收集记忆碎片，逐渐拼凑出主角何芰的身世。探讨有关个人成长、价值、生与死的传统母题。",
         image: "images/project-ISOLAND.jpg",
         techStack: ["Unity", "C#", "Shader Graph", "OOP", "Addressables"],
-        link: "https://github.com/lanfeng455/lanfeng455.github.io/releases/latest"
+        link: "https://store.steampowered.com/app/5034880/_/"
     },
     {
         id: 2,
@@ -148,7 +148,7 @@ function renderProjects() {
 
         // 使用图片占位，如果图片不存在则显示纯色背景
         const imageHtml = project.image 
-            ? `<img src="${project.image}" alt="${project.title}" class="project-image" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22225%22%20viewBox%3D%220%200%20400%20225%22%3E%3Crect%20width%3D%22400%22%20height%3D%22225%22%20fill%3D%22%232a2a2a%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20font-family%3D%22Arial%22%20font-size%3D%2214%22%20fill%3D%22%23a0a0a0%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3E${project.title}%3C%2Ftext%3E%3C%2Fsvg%3E'">`
+            ? `<img src="${project.image}" alt="${project.title}" class="project-image" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22225%22%20viewBox%3D%220%200%20400%20225%22%3E%3Crect%20width%3D%22400%22%20height%3D%22225%22%20fill%3D%22%232a2a2a%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20font-family%3D%22Arial%22%20font-size%3D%2214%22%20fill%3D%22%23a0a0a0%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3E${project.title}%3C%2Ftext%3E%3C%2Fsvg%3E'">`
             : `<div class="project-image" style="background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; color: #a0a0a0;">${project.title}</div>`;
 
         card.innerHTML = `
