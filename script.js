@@ -113,6 +113,7 @@ const writingsData = {
         { title: "【笔记：从Games101到Unity】对X光材质的勘误、深入探究渲染队列（外部）", link: "https://www.bilibili.com/opus/1008934289395417156" }
     ],
     "short-story": [
+        { title: "（2026）《站在一些文本无法触达的边缘》", link: "pages/poem_3.html"},
         { title: "（2026）《气味》", link: "pages/poem_2.html"},
         { title: "（2026）《云》", link: "pages/poem_1.html" }        
     ],
